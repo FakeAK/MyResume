@@ -3,14 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		274B9B8CF1D78A132FA99473 /* Pods_MyResume_MyResumeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FCE60775C8C3C1AAA1B1222 /* Pods_MyResume_MyResumeUITests.framework */; };
 		4136E43B25B5D7E600D56ABB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4136E43A25B5D7E600D56ABB /* AppDelegate.swift */; };
 		4136E43D25B5D7E600D56ABB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4136E43C25B5D7E600D56ABB /* SceneDelegate.swift */; };
-		4136E43F25B5D7E600D56ABB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4136E43E25B5D7E600D56ABB /* ContentView.swift */; };
+		4136E43F25B5D7E600D56ABB /* ResumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4136E43E25B5D7E600D56ABB /* ResumeView.swift */; };
 		4136E44125B5D7E900D56ABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4136E44025B5D7E900D56ABB /* Assets.xcassets */; };
 		4136E44425B5D7E900D56ABB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4136E44325B5D7E900D56ABB /* Preview Assets.xcassets */; };
 		4136E44725B5D7E900D56ABB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4136E44525B5D7E900D56ABB /* LaunchScreen.storyboard */; };
@@ -18,6 +18,12 @@
 		4136E45D25B5D7E900D56ABB /* MyResumeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4136E45C25B5D7E900D56ABB /* MyResumeUITests.swift */; };
 		4136E47425B5D83C00D56ABB /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 4136E47325B5D83C00D56ABB /* Podfile */; };
 		4136E47925B5D84600D56ABB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4136E47825B5D84600D56ABB /* .gitignore */; };
+		4136E48025B5DBB700D56ABB /* ResumeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4136E47F25B5DBB700D56ABB /* ResumeViewModel.swift */; };
+		4136E48925B5DF1400D56ABB /* Resume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4136E48825B5DF1400D56ABB /* Resume.swift */; };
+		4136E49425B5F0E500D56ABB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4136E49325B5F0E500D56ABB /* CardView.swift */; };
+		4181694025B604F1005B2143 /* FullNameJobOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4181693F25B604F1005B2143 /* FullNameJobOverlay.swift */; };
+		4181694D25B60561005B2143 /* PortraitImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4181694C25B60561005B2143 /* PortraitImage.swift */; };
+		4181695625B60994005B2143 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4181695525B60994005B2143 /* Colors.swift */; };
 		9C35CE860F33082200BF4D59 /* Pods_MyResume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC4CECD956650A969E4CC9D /* Pods_MyResume.framework */; };
 		F16FEC34DDC6559F762F0B1F /* Pods_MyResumeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A9A6D5770E7083A698B79D /* Pods_MyResumeTests.framework */; };
 /* End PBXBuildFile section */
@@ -45,7 +51,7 @@
 		4136E43725B5D7E600D56ABB /* MyResume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyResume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4136E43A25B5D7E600D56ABB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4136E43C25B5D7E600D56ABB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4136E43E25B5D7E600D56ABB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4136E43E25B5D7E600D56ABB /* ResumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeView.swift; sourceTree = "<group>"; };
 		4136E44025B5D7E900D56ABB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4136E44325B5D7E900D56ABB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4136E44625B5D7E900D56ABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,8 +62,14 @@
 		4136E45825B5D7E900D56ABB /* MyResumeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyResumeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4136E45C25B5D7E900D56ABB /* MyResumeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyResumeUITests.swift; sourceTree = "<group>"; };
 		4136E45E25B5D7E900D56ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4136E47325B5D83C00D56ABB /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		4136E47325B5D83C00D56ABB /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		4136E47825B5D84600D56ABB /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
+		4136E47F25B5DBB700D56ABB /* ResumeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeViewModel.swift; sourceTree = "<group>"; };
+		4136E48825B5DF1400D56ABB /* Resume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resume.swift; sourceTree = "<group>"; };
+		4136E49325B5F0E500D56ABB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		4181693F25B604F1005B2143 /* FullNameJobOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullNameJobOverlay.swift; sourceTree = "<group>"; };
+		4181694C25B60561005B2143 /* PortraitImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortraitImage.swift; sourceTree = "<group>"; };
+		4181695525B60994005B2143 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		42E7817D18196E226DD08D83 /* Pods-MyResume.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyResume.release.xcconfig"; path = "Target Support Files/Pods-MyResume/Pods-MyResume.release.xcconfig"; sourceTree = "<group>"; };
 		7FCE60775C8C3C1AAA1B1222 /* Pods_MyResume_MyResumeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyResume_MyResumeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9237117E00B872398639B1E1 /* Pods-MyResume-MyResumeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyResume-MyResumeUITests.debug.xcconfig"; path = "Target Support Files/Pods-MyResume-MyResumeUITests/Pods-MyResume-MyResumeUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -120,9 +132,14 @@
 		4136E43925B5D7E600D56ABB /* MyResume */ = {
 			isa = PBXGroup;
 			children = (
+				4136E48D25B5DF7E00D56ABB /* API */,
+				4136E49125B5F0C700D56ABB /* Components */,
+				4136E48725B5DF0B00D56ABB /* Models */,
+				4181694725B60507005B2143 /* Views */,
+				4136E47D25B5D8B600D56ABB /* Modules */,
+				4181695425B60981005B2143 /* Style */,
 				4136E43A25B5D7E600D56ABB /* AppDelegate.swift */,
 				4136E43C25B5D7E600D56ABB /* SceneDelegate.swift */,
-				4136E43E25B5D7E600D56ABB /* ContentView.swift */,
 				4136E44025B5D7E900D56ABB /* Assets.xcassets */,
 				4136E44525B5D7E900D56ABB /* LaunchScreen.storyboard */,
 				4136E47325B5D83C00D56ABB /* Podfile */,
@@ -159,6 +176,87 @@
 			path = MyResumeUITests;
 			sourceTree = "<group>";
 		};
+		4136E47D25B5D8B600D56ABB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				4136E47E25B5D8BB00D56ABB /* Resume */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		4136E47E25B5D8BB00D56ABB /* Resume */ = {
+			isa = PBXGroup;
+			children = (
+				4136E43E25B5D7E600D56ABB /* ResumeView.swift */,
+				4136E47F25B5DBB700D56ABB /* ResumeViewModel.swift */,
+			);
+			path = Resume;
+			sourceTree = "<group>";
+		};
+		4136E48725B5DF0B00D56ABB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4136E48825B5DF1400D56ABB /* Resume.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4136E48D25B5DF7E00D56ABB /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		4136E49125B5F0C700D56ABB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4181694B25B6054F005B2143 /* Images */,
+				4181693E25B604BB005B2143 /* Overlays */,
+				4136E49225B5F0D200D56ABB /* Card */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		4136E49225B5F0D200D56ABB /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				4136E49325B5F0E500D56ABB /* CardView.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		4181693E25B604BB005B2143 /* Overlays */ = {
+			isa = PBXGroup;
+			children = (
+				4181693F25B604F1005B2143 /* FullNameJobOverlay.swift */,
+			);
+			path = Overlays;
+			sourceTree = "<group>";
+		};
+		4181694725B60507005B2143 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4181694B25B6054F005B2143 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				4181694C25B60561005B2143 /* PortraitImage.swift */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		4181695425B60981005B2143 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				4181695525B60994005B2143 /* Colors.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
 		45E19194947FBBEE79257A66 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +291,7 @@
 				4136E43325B5D7E600D56ABB /* Sources */,
 				4136E43425B5D7E600D56ABB /* Frameworks */,
 				4136E43525B5D7E600D56ABB /* Resources */,
+				042DF28754D632328265BA7B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -230,6 +329,7 @@
 				4136E45425B5D7E900D56ABB /* Sources */,
 				4136E45525B5D7E900D56ABB /* Frameworks */,
 				4136E45625B5D7E900D56ABB /* Resources */,
+				F479987AB71B2D7A3610D583 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -313,6 +413,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		042DF28754D632328265BA7B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyResume/Pods-MyResume-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyResume/Pods-MyResume-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyResume/Pods-MyResume-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		80D5EFDF0489567D28AF416A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -379,6 +496,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F479987AB71B2D7A3610D583 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyResume-MyResumeUITests/Pods-MyResume-MyResumeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyResume-MyResumeUITests/Pods-MyResume-MyResumeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyResume-MyResumeUITests/Pods-MyResume-MyResumeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -386,9 +520,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4181694025B604F1005B2143 /* FullNameJobOverlay.swift in Sources */,
+				4181695625B60994005B2143 /* Colors.swift in Sources */,
 				4136E43B25B5D7E600D56ABB /* AppDelegate.swift in Sources */,
+				4136E48925B5DF1400D56ABB /* Resume.swift in Sources */,
+				4136E48025B5DBB700D56ABB /* ResumeViewModel.swift in Sources */,
 				4136E43D25B5D7E600D56ABB /* SceneDelegate.swift in Sources */,
-				4136E43F25B5D7E600D56ABB /* ContentView.swift in Sources */,
+				4136E49425B5F0E500D56ABB /* CardView.swift in Sources */,
+				4181694D25B60561005B2143 /* PortraitImage.swift in Sources */,
+				4136E43F25B5D7E600D56ABB /* ResumeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
