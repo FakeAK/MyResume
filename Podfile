@@ -6,6 +6,7 @@ target 'MyResume' do
   use_frameworks!
 
   # Pods for MyResume
+  pod 'SDWebImageSwiftUI'
 
   target 'MyResumeTests' do
     inherit! :search_paths
