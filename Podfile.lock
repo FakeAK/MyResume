@@ -1,4 +1,5 @@
 PODS:
+  - BubbleTransition (3.2.0)
   - SDWebImage (5.9.3):
     - SDWebImage/Core (= 5.9.3)
   - SDWebImage/Core (5.9.3)
@@ -6,17 +7,20 @@ PODS:
     - SDWebImage (~> 5.7)
 
 DEPENDENCIES:
+  - BubbleTransition (~> 3.2.0)
   - SDWebImageSwiftUI
 
 SPEC REPOS:
   trunk:
+    - BubbleTransition
     - SDWebImage
     - SDWebImageSwiftUI
 
 SPEC CHECKSUMS:
+  BubbleTransition: 2f112cc19772d9ab199bc850de92f5eb34744bce
   SDWebImage: a31ee8e90a97303529e03fb0c333eae0eacb88e9
   SDWebImageSwiftUI: 43687ffe232ddd33fe0659498b7ca9884fdd6b35
 
-PODFILE CHECKSUM: fa9a60aaba2e1934f3e4ac260c2b81a74f69afc6
+PODFILE CHECKSUM: af4c746130ea8922b2e01890bda2c91e9db6bed5
 
 COCOAPODS: 1.9.3

@@ -7,7 +7,8 @@ target 'MyResume' do
 
   # Pods for MyResume
   pod 'SDWebImageSwiftUI'
-
+  pod 'BubbleTransition', '~> 3.2.0'
+  
   target 'MyResumeTests' do
     inherit! :search_paths
     # Pods for testing
