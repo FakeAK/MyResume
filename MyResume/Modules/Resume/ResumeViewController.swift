@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import Combine
 import BubbleTransition
+import SnapKit
 
 class ResumeViewController: UIViewController {
     
@@ -17,9 +18,21 @@ class ResumeViewController: UIViewController {
     let transition = BubbleTransition()
     let interactiveTransition = BubbleInteractiveTransition()
     
+    private lazy var cardList: CardListCollectionViewController = {
+        let cardList = CardListCollectionViewController()
+        return cardList
+    }()
     
     init() {
-        super.init(nibName: "ResumeView", bundle: Bundle(for: ResumeViewController.self))
+        super.init(nibName: nil, bundle: nil)
+        
+        view.addSubview(cardList.view)
+        cardList.view.snp.makeConstraints { (view) in
+            view.top.equalTo(150)
+            view.leading.equalToSuperview()
+            view.trailing.equalToSuperview()
+            view.bottom.equalToSuperview().inset(150)
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -29,10 +42,9 @@ class ResumeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        initGestureRecognizers()
         viewModel.fetchResume()
-        view.backgroundColor = .red
-        addSwiftUIContent(content: CardView(), in: view)
-        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goToDetailsView)))
+//        addSwiftUIContent(content: CardView(), in: view)
     }
     
     @objc func goToDetailsView() {
@@ -46,6 +58,10 @@ class ResumeViewController: UIViewController {
         
         present(cardDetailsVC, animated: true)
     }
+    
+    private func initGestureRecognizers() {
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goToDetailsView)))
+    }
 }
 
 extension ResumeViewController: UIViewControllerTransitioningDelegate {
@@ -56,6 +72,7 @@ extension ResumeViewController: UIViewControllerTransitioningDelegate {
         transition.transitionMode = .present
         transition.startingPoint = view.center
         transition.bubbleColor = .clear
+        transition.duration = 0.4
         
         return transition
     }
