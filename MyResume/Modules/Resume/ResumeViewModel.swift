@@ -10,11 +10,18 @@ import Combine
 
 class ResumeViewModel: ObservableObject {
     
-    @Published var resume: Resume?
+    var resume: Resume?
     
     var subscriber: AnyCancellable? = nil
     var publisher: AnyPublisher<APIResponse<Resume>, Error>? = nil
     
+    
+    // MARK: - Bindings
+    var didFetchResume: ((Resume) -> ())?
+    var didGetError: ((Error) -> ())?
+    
+    
+    // MARK: - Methods
     func fetchResume() {
         publisher = API.fetchResume()
         subscriber = publisher?.sink(receiveCompletion: { (completion) in
@@ -26,10 +33,11 @@ class ResumeViewModel: ObservableObject {
             }
         }, receiveValue: { (data) in
             self.resume = data.value
+            self.didFetchResume?(data.value)
         })
     }
     
     func handleFetchError(error: Error) {
-        
+        didGetError?(error)
     }
 }

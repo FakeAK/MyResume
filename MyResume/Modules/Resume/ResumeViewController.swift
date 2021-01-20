@@ -20,12 +20,26 @@ class ResumeViewController: UIViewController {
     
     private lazy var cardList: CardListCollectionViewController = {
         let cardList = CardListCollectionViewController()
+        cardList.delegate = self
         return cardList
     }()
     
     init() {
         super.init(nibName: nil, bundle: nil)
-        
+        makeLayout()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        viewModel.fetchResume()
+        bindViewModelToController()
+    }
+    
+    private func makeLayout() {
         view.addSubview(cardList.view)
         cardList.view.snp.makeConstraints { (view) in
             view.top.equalTo(150)
@@ -35,32 +49,16 @@ class ResumeViewController: UIViewController {
         }
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    private func bindViewModelToController() {
+        viewModel.didFetchResume = { resume in
+            print(resume.personalInformations.firstName)
+        }
         
-        initGestureRecognizers()
-        viewModel.fetchResume()
-//        addSwiftUIContent(content: CardView(), in: view)
-    }
-    
-    @objc func goToDetailsView() {
-        let cardDetailsVC = CardDetailsViewController()
-        
-        cardDetailsVC.transitioningDelegate = self
-        cardDetailsVC.modalPresentationStyle = .custom
-        cardDetailsVC.modalPresentationCapturesStatusBarAppearance = true
-        cardDetailsVC.interactiveTransition = interactiveTransition
-        interactiveTransition.attach(to: cardDetailsVC)
-        
-        present(cardDetailsVC, animated: true)
-    }
-    
-    private func initGestureRecognizers() {
-        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goToDetailsView)))
+        viewModel.didGetError = { error in
+            if let error = error as? APIError {
+                print(error.statusCode)
+            }
+        }
     }
 }
 
@@ -83,5 +81,19 @@ extension ResumeViewController: UIViewControllerTransitioningDelegate {
         transition.bubbleColor = .clear
         
         return transition
+    }
+}
+
+extension ResumeViewController: CardListCollectionViewControllerDelegate {
+    func didSelectCard(at indexPath: IndexPath) {
+        let cardDetailsVC = CardDetailsViewController()
+        
+        cardDetailsVC.transitioningDelegate = self
+        cardDetailsVC.modalPresentationStyle = .custom
+        cardDetailsVC.modalPresentationCapturesStatusBarAppearance = true
+        cardDetailsVC.interactiveTransition = interactiveTransition
+        interactiveTransition.attach(to: cardDetailsVC)
+        
+        present(cardDetailsVC, animated: true)
     }
 }

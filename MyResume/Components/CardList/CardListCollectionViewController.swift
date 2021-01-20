@@ -13,6 +13,7 @@ class CardListCollectionViewController: UICollectionViewController {
     
     static let reusableCellIdentifier = "CardListCollectionViewCell"
     
+    weak var delegate: CardListCollectionViewControllerDelegate?
     var customLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
     
     init() {
@@ -30,7 +31,21 @@ class CardListCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        initCollectionView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setCollectionViewItemSize()
+    }
+    
+    private func setCollectionViewItemSize() {
+        let width = UIScreen.main.bounds.width * 0.8
+        let height = view.frame.height - 10 // -10 is for letting space to the cell shadow
+        customLayout.itemSize = CGSize(width: width, height: height)
+    }
+    
+    private func initCollectionView() {
         collectionView.backgroundColor = .white
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator = false
@@ -41,15 +56,12 @@ class CardListCollectionViewController: UICollectionViewController {
             forCellWithReuseIdentifier: CardListCollectionViewController.reusableCellIdentifier
         )
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        let width = UIScreen.main.bounds.width * 0.8
-        let height = view.frame.height - 10 // -10 is for letting space to the cell shadow
-        customLayout.itemSize = CGSize(width: width, height: height)
-    }
-    
+}
+
+
+
+// MARK: - Delegate & Data Source
+extension CardListCollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }
@@ -65,5 +77,9 @@ class CardListCollectionViewController: UICollectionViewController {
         )
         
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.didSelectCard(at: indexPath)
     }
 }

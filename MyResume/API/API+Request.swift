@@ -30,10 +30,6 @@ extension API {
                 let decodedData = try decoder.decode(T.self, from: data)
                 return APIResponse(value: decodedData, response: response)
             }
-            .mapError({ (error) -> Error in
-                print(error)
-                return error
-            })
             .receive(on: RunLoop.main)
             .eraseToAnyPublisher()
     }
@@ -45,9 +41,9 @@ extension API {
         
         switch httpResponse.statusCode {
         case 404:
-            throw RessourceNotFoundError(code: "RESSOURCE.NOT_FOUND", message: "")
+            throw RessourceNotFoundError(code: "RESSOURCE.NOT_FOUND", message: "") // replace "" with api message
         default:
-            throw APIError(statusCode: 500, code: "", message: "")
+            throw APIError(statusCode: 500, code: "SERVER_ERROR", message: "") // replace "" with api message
         }
     }
 }
