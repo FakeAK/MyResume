@@ -11,7 +11,6 @@ import Combine
 class ResumeViewModel: ObservableObject {
     
     var resume: Resume?
-    
     var subscriber: AnyCancellable? = nil
     var publisher: AnyPublisher<APIResponse<Resume>, Error>? = nil
     

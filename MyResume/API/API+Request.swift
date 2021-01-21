@@ -14,6 +14,7 @@ extension API {
                                       parameters: [String: Any]? = nil,
                                       _ decoder: JSONDecoder = JSONDecoder()) -> AnyPublisher<APIResponse<T>, Error> {
         var request: URLRequest = URLRequest(url: url)
+        request.cachePolicy = .reloadIgnoringLocalCacheData
         request.httpMethod = method.rawValue
 //        request.setValue("Bearer \(UserHelper.default.accessToken)", forHTTPHeaderField: HTTPHeaderField.authorization)
         request.setValue(ContentType.json, forHTTPHeaderField: HTTPHeaderField.contentType)
@@ -43,7 +44,7 @@ extension API {
         case 404:
             throw RessourceNotFoundError(code: "RESSOURCE.NOT_FOUND", message: "") // replace "" with api message
         default:
-            throw APIError(statusCode: 500, code: "SERVER_ERROR", message: "") // replace "" with api message
+            return
         }
     }
 }

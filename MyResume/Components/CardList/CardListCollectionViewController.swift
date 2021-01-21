@@ -11,14 +11,15 @@ import SnapKit
 
 class CardListCollectionViewController: UICollectionViewController {
     
-    static let reusableCellIdentifier = "CardListCollectionViewCell"
+    static let cellIdentifier = "CardListCollectionViewCell"
+    static let personalCellIdentifier = "personalCellIdentifier"
     
     weak var delegate: CardListCollectionViewControllerDelegate?
     var customLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
     
     init() {
         customLayout.scrollDirection = .horizontal
-        customLayout.sectionInset = UIEdgeInsets(top: 0, left: 50, bottom: 0, right: 50)
+        customLayout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         customLayout.scrollDirection = .horizontal
         customLayout.minimumLineSpacing = 20
         
@@ -46,40 +47,34 @@ class CardListCollectionViewController: UICollectionViewController {
     }
     
     private func initCollectionView() {
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         collectionView.backgroundColor = .white
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator = false
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.isScrollEnabled = true
+        registerCells()
+    }
+    
+    private func registerCells() {
         collectionView.register(
             CardListCollectionViewCell.self,
-            forCellWithReuseIdentifier: CardListCollectionViewController.reusableCellIdentifier
+            forCellWithReuseIdentifier: CardListCollectionViewController.cellIdentifier
+        )
+        collectionView.register(
+            PersonalCardCollectionViewCell.self,
+            forCellWithReuseIdentifier: CardListCollectionViewController.personalCellIdentifier
         )
     }
 }
 
 
 
-// MARK: - Delegate & Data Source
+// MARK: - Delegate
 extension CardListCollectionViewController {
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
-    }
-    
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: CardListCollectionViewController.reusableCellIdentifier,
-            for: indexPath
-        )
-        
-        return cell
-    }
-    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.didSelectCard(at: indexPath)
+        let cell = collectionView.cellForItem(at: indexPath)
+        
+//        delegate?.didSelectCard(at: indexPath)
     }
 }

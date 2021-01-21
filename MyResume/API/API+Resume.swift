@@ -10,7 +10,7 @@ import Combine
 
 extension API {
     static func fetchResume() -> AnyPublisher<APIResponse<Resume>, Error>? {
-        guard let url = URL(string: "\(API.ROOT_URL)\(Routes.resume.rawValue)/ok") else {
+        guard let url = URL(string: "\(API.ROOT_URL)\(Routes.resume.rawValue)") else {
             return nil
         }
         

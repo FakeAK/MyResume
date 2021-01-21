@@ -13,10 +13,11 @@ import SnapKit
 
 class ResumeViewController: UIViewController {
     
-    let viewModel: ResumeViewModel = ResumeViewModel()
+    private let viewModel: ResumeViewModel = ResumeViewModel()
     
-    let transition = BubbleTransition()
-    let interactiveTransition = BubbleInteractiveTransition()
+    private let transition = BubbleTransition()
+    private let interactiveTransition = BubbleInteractiveTransition()
+    private var dataSource: CardListCollectionViewDataSource<CardListCollectionViewCell, Resume>?
     
     private lazy var cardList: CardListCollectionViewController = {
         let cardList = CardListCollectionViewController()
@@ -40,7 +41,7 @@ class ResumeViewController: UIViewController {
     }
     
     private func makeLayout() {
-        view.addSubview(cardList.view)
+        cardList.attach(to: self, in: view)
         cardList.view.snp.makeConstraints { (view) in
             view.top.equalTo(150)
             view.leading.equalToSuperview()
@@ -51,12 +52,16 @@ class ResumeViewController: UIViewController {
     
     private func bindViewModelToController() {
         viewModel.didFetchResume = { resume in
-            print(resume.personalInformations.firstName)
+            self.dataSource = CardListCollectionViewDataSource(resume: resume)
+            self.cardList.collectionView.dataSource = self.dataSource
+            self.cardList.collectionView.reloadData()
         }
         
         viewModel.didGetError = { error in
+            print(error)
             if let error = error as? APIError {
-                print(error.statusCode)
+                self.cardList.removeFromParentViewController()
+                // TODO: attach ErrorViewController
             }
         }
     }
