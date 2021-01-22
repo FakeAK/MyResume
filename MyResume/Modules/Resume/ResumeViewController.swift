@@ -27,7 +27,6 @@ class ResumeViewController: UIViewController {
     
     init() {
         super.init(nibName: nil, bundle: nil)
-        makeLayout()
     }
     
     required init?(coder: NSCoder) {
@@ -36,18 +35,25 @@ class ResumeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        makeLayout()
+        makeStyle()
         viewModel.fetchResume()
         bindViewModelToController()
     }
     
     private func makeLayout() {
         cardList.attach(to: self, in: view)
-        cardList.view.snp.makeConstraints { (view) in
-            view.top.equalTo(150)
-            view.leading.equalToSuperview()
-            view.trailing.equalToSuperview()
-            view.bottom.equalToSuperview().inset(150)
+        cardList.view.snp.makeConstraints { (cardList) in
+            cardList.top.equalTo(0.15 * self.view.frame.size.height)
+            cardList.leading.equalToSuperview()
+            cardList.trailing.equalToSuperview()
+            cardList.bottom.equalToSuperview().inset(0.2 * self.view.frame.size.height)
         }
+    }
+    
+    private func makeStyle() {
+        view.backgroundColor = .white
     }
     
     private func bindViewModelToController() {

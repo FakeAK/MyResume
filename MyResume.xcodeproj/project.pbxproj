@@ -25,7 +25,6 @@
 		4181695625B60994005B2143 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4181695525B60994005B2143 /* Colors.swift */; };
 		4181695D25B622DE005B2143 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4181695C25B622DE005B2143 /* UIViewController.swift */; };
 		4181696525B6254C005B2143 /* ResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4181696425B6254C005B2143 /* ResumeViewController.swift */; };
-		4181696A25B6257A005B2143 /* ResumeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4181696925B6257A005B2143 /* ResumeView.xib */; };
 		4181697625B6338A005B2143 /* CardDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4181697525B6338A005B2143 /* CardDetailsView.xib */; };
 		4181697B25B63396005B2143 /* CardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4181697A25B63396005B2143 /* CardDetailsViewController.swift */; };
 		4181699225B73B92005B2143 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4181699125B73B92005B2143 /* API.swift */; };
@@ -43,6 +42,8 @@
 		41CE1FB825B9A58100C1926A /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CE1FB725B9A58100C1926A /* Contact.swift */; };
 		41CE1FBD25B9A58E00C1926A /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CE1FBC25B9A58E00C1926A /* Company.swift */; };
 		41CE1FC225B9CAA700C1926A /* PersonalCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CE1FC125B9CAA700C1926A /* PersonalCardCollectionViewCell.swift */; };
+		41CE1FCD25BAEF7000C1926A /* ExperienceCardListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CE1FCC25BAEF7000C1926A /* ExperienceCardListCollectionViewCell.swift */; };
+		41CE1FD225BB126100C1926A /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CE1FD125BB126100C1926A /* Date.swift */; };
 		9C35CE860F33082200BF4D59 /* Pods_MyResume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC4CECD956650A969E4CC9D /* Pods_MyResume.framework */; };
 		F16FEC34DDC6559F762F0B1F /* Pods_MyResumeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A9A6D5770E7083A698B79D /* Pods_MyResumeTests.framework */; };
 /* End PBXBuildFile section */
@@ -90,7 +91,6 @@
 		4181695525B60994005B2143 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		4181695C25B622DE005B2143 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		4181696425B6254C005B2143 /* ResumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeViewController.swift; sourceTree = "<group>"; };
-		4181696925B6257A005B2143 /* ResumeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResumeView.xib; sourceTree = "<group>"; };
 		4181697525B6338A005B2143 /* CardDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardDetailsView.xib; sourceTree = "<group>"; };
 		4181697A25B63396005B2143 /* CardDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsViewController.swift; sourceTree = "<group>"; };
 		4181699125B73B92005B2143 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -108,6 +108,8 @@
 		41CE1FB725B9A58100C1926A /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		41CE1FBC25B9A58E00C1926A /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		41CE1FC125B9CAA700C1926A /* PersonalCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		41CE1FCC25BAEF7000C1926A /* ExperienceCardListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceCardListCollectionViewCell.swift; sourceTree = "<group>"; };
+		41CE1FD125BB126100C1926A /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		42E7817D18196E226DD08D83 /* Pods-MyResume.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyResume.release.xcconfig"; path = "Target Support Files/Pods-MyResume/Pods-MyResume.release.xcconfig"; sourceTree = "<group>"; };
 		7FCE60775C8C3C1AAA1B1222 /* Pods_MyResume_MyResumeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyResume_MyResumeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9237117E00B872398639B1E1 /* Pods-MyResume-MyResumeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyResume-MyResumeUITests.debug.xcconfig"; path = "Target Support Files/Pods-MyResume-MyResumeUITests/Pods-MyResume-MyResumeUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -229,7 +231,6 @@
 			children = (
 				4136E47F25B5DBB700D56ABB /* ResumeViewModel.swift */,
 				4181696425B6254C005B2143 /* ResumeViewController.swift */,
-				4181696925B6257A005B2143 /* ResumeView.xib */,
 			);
 			path = Resume;
 			sourceTree = "<group>";
@@ -321,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				4181695C25B622DE005B2143 /* UIViewController.swift */,
+				41CE1FD125BB126100C1926A /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -350,6 +352,7 @@
 			children = (
 				41CE1F9F25B8CA7D00C1926A /* CardListCollectionViewCell.swift */,
 				41CE1FC125B9CAA700C1926A /* PersonalCardCollectionViewCell.swift */,
+				41CE1FCC25BAEF7000C1926A /* ExperienceCardListCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -488,7 +491,6 @@
 				4136E47925B5D84600D56ABB /* .gitignore in Resources */,
 				4136E44725B5D7E900D56ABB /* LaunchScreen.storyboard in Resources */,
 				4136E44425B5D7E900D56ABB /* Preview Assets.xcassets in Resources */,
-				4181696A25B6257A005B2143 /* ResumeView.xib in Resources */,
 				4181697625B6338A005B2143 /* CardDetailsView.xib in Resources */,
 				4136E47425B5D83C00D56ABB /* Podfile in Resources */,
 				4136E44125B5D7E900D56ABB /* Assets.xcassets in Resources */,
@@ -621,6 +623,7 @@
 			files = (
 				4181694025B604F1005B2143 /* FullNameJobOverlay.swift in Sources */,
 				4181697B25B63396005B2143 /* CardDetailsViewController.swift in Sources */,
+				41CE1FCD25BAEF7000C1926A /* ExperienceCardListCollectionViewCell.swift in Sources */,
 				41CE1FB825B9A58100C1926A /* Contact.swift in Sources */,
 				418169B125B77D2D005B2143 /* API+Routes.swift in Sources */,
 				41CE1FB325B99EF800C1926A /* Experience.swift in Sources */,
@@ -641,6 +644,7 @@
 				418169B925B78D33005B2143 /* API+Errors.swift in Sources */,
 				4181699225B73B92005B2143 /* API.swift in Sources */,
 				41CE1FA025B8CA7D00C1926A /* CardListCollectionViewCell.swift in Sources */,
+				41CE1FD225BB126100C1926A /* Date.swift in Sources */,
 				418169D325B88B05005B2143 /* CardListCollectionViewController.swift in Sources */,
 				418169AC25B779D4005B2143 /* API+Resume.swift in Sources */,
 				4181694D25B60561005B2143 /* PortraitImage.swift in Sources */,

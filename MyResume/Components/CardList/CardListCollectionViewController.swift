@@ -12,7 +12,8 @@ import SnapKit
 class CardListCollectionViewController: UICollectionViewController {
     
     static let cellIdentifier = "CardListCollectionViewCell"
-    static let personalCellIdentifier = "personalCellIdentifier"
+    static let personalCellIdentifier = "PersonalCellIdentifier"
+    static let experienceCellIdentifier = "ExperienceCellIdentifier"
     
     weak var delegate: CardListCollectionViewControllerDelegate?
     var customLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -65,6 +66,10 @@ class CardListCollectionViewController: UICollectionViewController {
             PersonalCardCollectionViewCell.self,
             forCellWithReuseIdentifier: CardListCollectionViewController.personalCellIdentifier
         )
+        collectionView.register(
+            ExperienceCardListCollectionViewCell.self,
+            forCellWithReuseIdentifier: CardListCollectionViewController.experienceCellIdentifier
+        )
     }
 }
 
@@ -73,8 +78,6 @@ class CardListCollectionViewController: UICollectionViewController {
 // MARK: - Delegate
 extension CardListCollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath)
-        
-//        delegate?.didSelectCard(at: indexPath)
+        delegate?.didSelectCard(at: indexPath)
     }
 }

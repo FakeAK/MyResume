@@ -37,10 +37,25 @@ class CardListCollectionViewDataSource<cell: UICollectionViewCell, T>: NSObject,
     func createCell(_ collectionView: UICollectionView, for indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.section {
         case 0:
-            return collectionView.dequeueReusableCell(
+            let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: CardListCollectionViewController.personalCellIdentifier,
                 for: indexPath
             ) as! PersonalCardCollectionViewCell
+            
+            cell.fullNameLabel.text = "\(resume.personalInformations.firstName) \(resume.personalInformations.lastName)"
+            cell.jobTitleLabel.text = resume.personalInformations.jobTitle
+            return cell
+        case 1:
+            let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: CardListCollectionViewController.experienceCellIdentifier,
+                for: indexPath
+            ) as! ExperienceCardListCollectionViewCell
+            
+            let experience = resume.experiences[indexPath.row]
+            cell.companyNameLabel.text = experience.company.name
+            cell.jobTitleLabel.text = experience.jobTitle
+            cell.dateLabel.text = "\(Date.getShortDateAsString(from: experience.from)) - \(Date.getShortDateAsString(from: experience.to))"
+            return cell
         default:
             return collectionView.dequeueReusableCell(
                 withReuseIdentifier: CardListCollectionViewController.cellIdentifier,
