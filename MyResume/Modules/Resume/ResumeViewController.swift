@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 import Combine
 import BubbleTransition
 import SnapKit
@@ -14,9 +15,6 @@ import SnapKit
 class ResumeViewController: UIViewController {
     
     private let viewModel: ResumeViewModel = ResumeViewModel()
-    
-    private let transition = BubbleTransition()
-    private let interactiveTransition = BubbleInteractiveTransition()
     private var dataSource: CardListCollectionViewDataSource<CardListCollectionViewCell, Resume>?
     
     private lazy var cardList: CardListCollectionViewController = {
@@ -73,37 +71,14 @@ class ResumeViewController: UIViewController {
     }
 }
 
-extension ResumeViewController: UIViewControllerTransitioningDelegate {
-    public func animationController(
-        forPresented presented: UIViewController,
-        presenting: UIViewController,
-        source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.transitionMode = .present
-        transition.startingPoint = view.center
-        transition.bubbleColor = .clear
-        transition.duration = 0.4
-        
-        return transition
-    }
-    
-    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.transitionMode = .dismiss
-        transition.startingPoint = view.center
-        transition.bubbleColor = .clear
-        
-        return transition
-    }
-}
 
 extension ResumeViewController: CardListCollectionViewControllerDelegate {
     func didSelectCard(at indexPath: IndexPath) {
-        let cardDetailsVC = CardDetailsViewController()
-        
+        let cardDetailsVC = HostingViewController<PersonalCardDetailsView>(
+            bridgeViewController: UIHostingController(rootView: PersonalCardDetailsView())
+        )
         cardDetailsVC.transitioningDelegate = self
         cardDetailsVC.modalPresentationStyle = .custom
-        cardDetailsVC.modalPresentationCapturesStatusBarAppearance = true
-        cardDetailsVC.interactiveTransition = interactiveTransition
-        interactiveTransition.attach(to: cardDetailsVC)
         
         present(cardDetailsVC, animated: true)
     }

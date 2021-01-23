@@ -7,7 +7,6 @@ target 'MyResume' do
 
   # Pods for MyResume
   pod 'SDWebImageSwiftUI'
-  pod 'BubbleTransition', '~> 3.2.0'
   pod 'SnapKit', '~> 5.0.0'
   
   target 'MyResumeTests' do

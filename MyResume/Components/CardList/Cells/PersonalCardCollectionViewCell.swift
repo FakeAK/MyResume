@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class PersonalCardCollectionViewCell: CardListCollectionViewCell {
+final class PersonalCardCollectionViewCell: CardListCollectionViewCell {
     
     // MARK: - Views
     let imageView = UIImageView()

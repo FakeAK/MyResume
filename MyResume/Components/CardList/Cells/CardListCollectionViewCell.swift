@@ -10,7 +10,7 @@ import UIKit
 import SDWebImage
 import SnapKit
 
-class CardListCollectionViewCell: UICollectionViewCell {
+public class CardListCollectionViewCell: UICollectionViewCell {
     
     let containerView = UIView()
     

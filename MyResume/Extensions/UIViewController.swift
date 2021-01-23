@@ -33,3 +33,16 @@ extension UIViewController {
         self.didMove(toParent: viewController)
     }
 }
+
+extension UIViewController: UIViewControllerTransitioningDelegate {
+    public func animationController(
+        forPresented presented: UIViewController,
+        presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return Transition.default
+    }
+    
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        Transition.default.mode = .dismiss
+        return Transition.default
+    }
+}
