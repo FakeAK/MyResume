@@ -38,6 +38,7 @@ extension UIViewController: UIViewControllerTransitioningDelegate {
     public func animationController(
         forPresented presented: UIViewController,
         presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        Transition.default.mode = .present
         return Transition.default
     }
     

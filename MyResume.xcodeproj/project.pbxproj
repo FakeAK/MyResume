@@ -45,6 +45,7 @@
 		41CE1FDA25BB2A8C00C1926A /* PersonalCardDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CE1FD925BB2A8C00C1926A /* PersonalCardDetailsView.swift */; };
 		41CE1FE325BB428E00C1926A /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CE1FE225BB428E00C1926A /* Transition.swift */; };
 		41CE1FED25BB7ACD00C1926A /* HostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CE1FEC25BB7ACD00C1926A /* HostingViewController.swift */; };
+		41CE1FF725BDD95800C1926A /* PlayfairDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41CE1FF625BDD95800C1926A /* PlayfairDisplay-Regular.ttf */; };
 		9C35CE860F33082200BF4D59 /* Pods_MyResume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC4CECD956650A969E4CC9D /* Pods_MyResume.framework */; };
 		F16FEC34DDC6559F762F0B1F /* Pods_MyResumeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A9A6D5770E7083A698B79D /* Pods_MyResumeTests.framework */; };
 /* End PBXBuildFile section */
@@ -112,6 +113,7 @@
 		41CE1FD925BB2A8C00C1926A /* PersonalCardDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalCardDetailsView.swift; sourceTree = "<group>"; };
 		41CE1FE225BB428E00C1926A /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		41CE1FEC25BB7ACD00C1926A /* HostingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingViewController.swift; sourceTree = "<group>"; };
+		41CE1FF625BDD95800C1926A /* PlayfairDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		42E7817D18196E226DD08D83 /* Pods-MyResume.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyResume.release.xcconfig"; path = "Target Support Files/Pods-MyResume/Pods-MyResume.release.xcconfig"; sourceTree = "<group>"; };
 		7FCE60775C8C3C1AAA1B1222 /* Pods_MyResume_MyResumeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyResume_MyResumeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9237117E00B872398639B1E1 /* Pods-MyResume-MyResumeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyResume-MyResumeUITests.debug.xcconfig"; path = "Target Support Files/Pods-MyResume-MyResumeUITests/Pods-MyResume-MyResumeUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -183,7 +185,7 @@
 				4136E47D25B5D8B600D56ABB /* Modules */,
 				4181695425B60981005B2143 /* Style */,
 				4181695B25B622BA005B2143 /* Extensions */,
-				41CE1FE125BB412B00C1926A /* Animations */,
+				41CE1FE125BB412B00C1926A /* Transitions */,
 				4136E43A25B5D7E600D56ABB /* AppDelegate.swift */,
 				4136E43C25B5D7E600D56ABB /* SceneDelegate.swift */,
 				4136E44025B5D7E900D56ABB /* Assets.xcassets */,
@@ -310,6 +312,7 @@
 		4181695425B60981005B2143 /* Style */ = {
 			isa = PBXGroup;
 			children = (
+				41CE1FF425BDD8F500C1926A /* Fonts */,
 				4181695525B60994005B2143 /* Colors.swift */,
 			);
 			path = Style;
@@ -352,12 +355,12 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		41CE1FE125BB412B00C1926A /* Animations */ = {
+		41CE1FE125BB412B00C1926A /* Transitions */ = {
 			isa = PBXGroup;
 			children = (
 				41CE1FE225BB428E00C1926A /* Transition.swift */,
 			);
-			path = Animations;
+			path = Transitions;
 			sourceTree = "<group>";
 		};
 		41CE1FEA25BB7ABC00C1926A /* Common */ = {
@@ -374,6 +377,22 @@
 				41CE1FEC25BB7ACD00C1926A /* HostingViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		41CE1FF425BDD8F500C1926A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				41CE1FF525BDD93F00C1926A /* PlayfairDisplay */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		41CE1FF525BDD93F00C1926A /* PlayfairDisplay */ = {
+			isa = PBXGroup;
+			children = (
+				41CE1FF625BDD95800C1926A /* PlayfairDisplay-Regular.ttf */,
+			);
+			path = PlayfairDisplay;
 			sourceTree = "<group>";
 		};
 		45E19194947FBBEE79257A66 /* Pods */ = {
@@ -509,6 +528,7 @@
 			files = (
 				4136E47925B5D84600D56ABB /* .gitignore in Resources */,
 				4136E44725B5D7E900D56ABB /* LaunchScreen.storyboard in Resources */,
+				41CE1FF725BDD95800C1926A /* PlayfairDisplay-Regular.ttf in Resources */,
 				4136E44425B5D7E900D56ABB /* Preview Assets.xcassets in Resources */,
 				4136E47425B5D83C00D56ABB /* Podfile in Resources */,
 				4136E44125B5D7E900D56ABB /* Assets.xcassets in Resources */,
