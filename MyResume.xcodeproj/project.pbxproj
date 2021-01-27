@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		274B9B8CF1D78A132FA99473 /* Pods_MyResume_MyResumeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FCE60775C8C3C1AAA1B1222 /* Pods_MyResume_MyResumeUITests.framework */; };
+		412A777125C1B1AA00451C41 /* SocialNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412A777025C1B1AA00451C41 /* SocialNetwork.swift */; };
 		4136E43B25B5D7E600D56ABB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4136E43A25B5D7E600D56ABB /* AppDelegate.swift */; };
 		4136E43D25B5D7E600D56ABB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4136E43C25B5D7E600D56ABB /* SceneDelegate.swift */; };
 		4136E44125B5D7E900D56ABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4136E44025B5D7E900D56ABB /* Assets.xcassets */; };
@@ -46,6 +47,8 @@
 		41CE1FE325BB428E00C1926A /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CE1FE225BB428E00C1926A /* Transition.swift */; };
 		41CE1FED25BB7ACD00C1926A /* HostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CE1FEC25BB7ACD00C1926A /* HostingViewController.swift */; };
 		41CE1FF725BDD95800C1926A /* PlayfairDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41CE1FF625BDD95800C1926A /* PlayfairDisplay-Regular.ttf */; };
+		41CE1FFC25C05E5D00C1926A /* CallToActionButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CE1FFB25C05E5D00C1926A /* CallToActionButtonsView.swift */; };
+		41CE200225C05F5E00C1926A /* RoundActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CE200125C05F5E00C1926A /* RoundActionButton.swift */; };
 		9C35CE860F33082200BF4D59 /* Pods_MyResume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC4CECD956650A969E4CC9D /* Pods_MyResume.framework */; };
 		F16FEC34DDC6559F762F0B1F /* Pods_MyResumeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A9A6D5770E7083A698B79D /* Pods_MyResumeTests.framework */; };
 /* End PBXBuildFile section */
@@ -70,6 +73,7 @@
 /* Begin PBXFileReference section */
 		1FD29E4D5FCF3A2D34B8CAEC /* Pods-MyResume-MyResumeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyResume-MyResumeUITests.release.xcconfig"; path = "Target Support Files/Pods-MyResume-MyResumeUITests/Pods-MyResume-MyResumeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2904FCBDA59884B5D09D14DB /* Pods-MyResumeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyResumeTests.debug.xcconfig"; path = "Target Support Files/Pods-MyResumeTests/Pods-MyResumeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		412A777025C1B1AA00451C41 /* SocialNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetwork.swift; sourceTree = "<group>"; };
 		4136E43725B5D7E600D56ABB /* MyResume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyResume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4136E43A25B5D7E600D56ABB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4136E43C25B5D7E600D56ABB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +118,8 @@
 		41CE1FE225BB428E00C1926A /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		41CE1FEC25BB7ACD00C1926A /* HostingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingViewController.swift; sourceTree = "<group>"; };
 		41CE1FF625BDD95800C1926A /* PlayfairDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		41CE1FFB25C05E5D00C1926A /* CallToActionButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallToActionButtonsView.swift; sourceTree = "<group>"; };
+		41CE200125C05F5E00C1926A /* RoundActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundActionButton.swift; sourceTree = "<group>"; };
 		42E7817D18196E226DD08D83 /* Pods-MyResume.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyResume.release.xcconfig"; path = "Target Support Files/Pods-MyResume/Pods-MyResume.release.xcconfig"; sourceTree = "<group>"; };
 		7FCE60775C8C3C1AAA1B1222 /* Pods_MyResume_MyResumeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyResume_MyResumeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9237117E00B872398639B1E1 /* Pods-MyResume-MyResumeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyResume-MyResumeUITests.debug.xcconfig"; path = "Target Support Files/Pods-MyResume-MyResumeUITests/Pods-MyResume-MyResumeUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -250,6 +256,7 @@
 				41CE1FB225B99EF800C1926A /* Experience.swift */,
 				41CE1FB725B9A58100C1926A /* Contact.swift */,
 				41CE1FBC25B9A58E00C1926A /* Company.swift */,
+				412A777025C1B1AA00451C41 /* SocialNetwork.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -269,6 +276,7 @@
 		4136E49125B5F0C700D56ABB /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				41CE200025C05F4C00C1926A /* Buttons */,
 				418169D125B88AF2005B2143 /* CardList */,
 				4181694B25B6054F005B2143 /* Images */,
 				4181693E25B604BB005B2143 /* Overlays */,
@@ -297,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				41CE1FD925BB2A8C00C1926A /* PersonalCardDetailsView.swift */,
+				41CE1FFB25C05E5D00C1926A /* CallToActionButtonsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -393,6 +402,14 @@
 				41CE1FF625BDD95800C1926A /* PlayfairDisplay-Regular.ttf */,
 			);
 			path = PlayfairDisplay;
+			sourceTree = "<group>";
+		};
+		41CE200025C05F4C00C1926A /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				41CE200125C05F5E00C1926A /* RoundActionButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		45E19194947FBBEE79257A66 /* Pods */ = {
@@ -671,6 +688,7 @@
 				4136E43B25B5D7E600D56ABB /* AppDelegate.swift in Sources */,
 				4136E48925B5DF1400D56ABB /* Resume.swift in Sources */,
 				41CE1FE325BB428E00C1926A /* Transition.swift in Sources */,
+				41CE1FFC25C05E5D00C1926A /* CallToActionButtonsView.swift in Sources */,
 				41CE1FBD25B9A58E00C1926A /* Company.swift in Sources */,
 				4181696525B6254C005B2143 /* ResumeViewController.swift in Sources */,
 				4181695D25B622DE005B2143 /* UIViewController.swift in Sources */,
@@ -678,6 +696,7 @@
 				4136E48025B5DBB700D56ABB /* ResumeViewModel.swift in Sources */,
 				4136E43D25B5D7E600D56ABB /* SceneDelegate.swift in Sources */,
 				41CE1FC225B9CAA700C1926A /* PersonalCardCollectionViewCell.swift in Sources */,
+				41CE200225C05F5E00C1926A /* RoundActionButton.swift in Sources */,
 				4136E49425B5F0E500D56ABB /* CardView.swift in Sources */,
 				418169B925B78D33005B2143 /* API+Errors.swift in Sources */,
 				4181699225B73B92005B2143 /* API.swift in Sources */,
@@ -687,6 +706,7 @@
 				418169D325B88B05005B2143 /* CardListCollectionViewController.swift in Sources */,
 				418169AC25B779D4005B2143 /* API+Resume.swift in Sources */,
 				4181694D25B60561005B2143 /* PortraitImage.swift in Sources */,
+				412A777125C1B1AA00451C41 /* SocialNetwork.swift in Sources */,
 				4181699F25B76ECB005B2143 /* API+Request.swift in Sources */,
 				41CE1FDA25BB2A8C00C1926A /* PersonalCardDetailsView.swift in Sources */,
 			);

@@ -26,9 +26,8 @@ final class PersonalCardCollectionViewCell: CardListCollectionViewCell {
         containerView.addSubview(labelContainer)
         labelContainer.addSubview(fullNameLabel)
         labelContainer.addSubview(jobTitleLabel)
-        
-        makeCellLayout()
         makeCellStyle()
+        makeCellLayout()
         animate()
     }
     

@@ -32,11 +32,10 @@ struct PersonalCardDetailsView: DismissableView {
                         Text("Arthur Kleiber")
                             .font(Font.largeTitle)
                             .fontWeight(.bold)
-                            .foregroundColor(Color.init(Colors.textColor))
+                            .foregroundColor(Color.init(Colors.titleTextColor))
                             .padding(.top, 20)
-                        
                         Text("Full Stack Engineer")
-                            .foregroundColor(Color(Colors.textColor))
+                            .foregroundColor(Color(Colors.subtitleTextColor))
                             .font(Font.title3)
                         Text("Fermement convaincu que l'informatique. Je suis passionné par l'informatique dans son ensemble. Curieux de nature j'aime me perdre dans la découverte informatique.Fermement convaincu que l'informatique. Je suis passionné par l'informatique dans son ensemble. Curieux de nature j'aime me perdre dans la découverte informatique. Fermement convaincu que l'informatique. Je suis passionné par l'informatique dans son ensemble. Curieux de nature j'aime me perdre dans la découverte informatique. Fermement convaincu que l'informatique. Je suis passionné par l'informatique dans son ensemble. Curieux de nature j'aime me perdre dans la découverte informatique. Fermement convaincu que l'informatique. Je suis passionné par l'informatique dans son ensemble. Curieux de nature j'aime me perdre dans la découverte informatique. Fermement convaincu que l'informatique. Je suis passionné par l'informatique dans son ensemble. Curieux de nature j'aime me perdre dans la découverte informatique. Fermement convaincu que l'informatique. Je suis passionné par l'informatique dans son ensemble. Curieux de nature j'aime me perdre dans la découverte informatique. Fermement convaincu que l'informatique. Je suis passionné par l'informatique dans son ensemble. Curieux de nature j'aime me perdre dans la découverte informatique. Fermement convaincu que l'informatique. Je suis passionné par l'informatique dans son ensemble. Curieux de nature j'aime me perdre dans la découverte informatique.")
                             .padding(.top, 20)

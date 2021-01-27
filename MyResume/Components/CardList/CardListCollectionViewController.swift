@@ -36,8 +36,8 @@ class CardListCollectionViewController: UICollectionViewController {
         initCollectionView()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
         setCollectionViewItemSize()
     }
     

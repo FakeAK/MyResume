@@ -17,11 +17,7 @@ class ResumeViewController: UIViewController {
     private let viewModel: ResumeViewModel = ResumeViewModel()
     private var dataSource: CardListCollectionViewDataSource<CardListCollectionViewCell, Resume>?
     
-    private lazy var cardList: CardListCollectionViewController = {
-        let cardList = CardListCollectionViewController()
-        cardList.delegate = self
-        return cardList
-    }()
+    private var cardList: CardListCollectionViewController?
     
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -34,20 +30,9 @@ class ResumeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        makeLayout()
         makeStyle()
         viewModel.fetchResume()
         bindViewModelToController()
-    }
-    
-    private func makeLayout() {
-        cardList.attach(to: self, in: view)
-        cardList.view.snp.makeConstraints { (cardList) in
-            cardList.top.equalTo(0.15 * self.view.frame.size.height)
-            cardList.leading.equalToSuperview()
-            cardList.trailing.equalToSuperview()
-            cardList.bottom.equalToSuperview().inset(0.2 * self.view.frame.size.height)
-        }
     }
     
     private func makeStyle() {
@@ -56,17 +41,54 @@ class ResumeViewController: UIViewController {
     
     private func bindViewModelToController() {
         viewModel.didFetchResume = { resume in
-            self.dataSource = CardListCollectionViewDataSource(resume: resume)
-            self.cardList.collectionView.dataSource = self.dataSource
-            self.cardList.collectionView.reloadData()
+            self.addCardListToView()
+            self.reloadCardList(resume: resume)
+            self.addSocialNetworksList(socialNetworks: resume.personalInformations.socialNetworks)
         }
         
         viewModel.didGetError = { error in
             print(error)
             if let error = error as? APIError {
-                self.cardList.removeFromParentViewController()
                 // TODO: attach ErrorViewController
             }
+        }
+    }
+    
+    private func addCardListToView() {
+        cardList = CardListCollectionViewController()
+        cardList?.delegate = self
+        cardList?.attach(to: self, in: view)
+        cardList?.view.snp.makeConstraints { (cardList) in
+            cardList.top.equalTo(0.15 * self.view.frame.size.height)
+            cardList.leading.equalToSuperview()
+            cardList.trailing.equalToSuperview()
+            cardList.bottom.equalToSuperview().inset(0.2 * self.view.frame.size.height)
+        }
+    }
+    
+    private func reloadCardList(resume: Resume) {
+        DispatchQueue.main.async {
+            self.dataSource = CardListCollectionViewDataSource(resume: resume)
+            self.cardList?.collectionView.dataSource = self.dataSource
+            self.cardList?.collectionView.reloadData()
+        }
+    }
+    
+    private func addSocialNetworksList(socialNetworks: [SocialNetwork]) {
+        let footer = UIView()
+        view.addSubview(footer)
+        footer.snp.makeConstraints { (footer) in
+            footer.trailing.leading.equalToSuperview()
+            footer.bottom.equalToSuperview().inset(view.safeAreaInsets.bottom)
+            footer.top.equalTo(cardList!.view.snp.bottom)
+        }
+        
+        let socialNetworksViewHostVC = UIHostingController(rootView: CallToSocialButtonsView(socialNetworks: socialNetworks))
+        socialNetworksViewHostVC.attach(to: self, in: footer)
+        socialNetworksViewHostVC.view.snp.makeConstraints { (socialButtonsView) in
+            socialButtonsView.leading.trailing.equalToSuperview()
+            socialButtonsView.height.equalTo(100)
+            socialButtonsView.centerY.equalToSuperview()
         }
     }
 }

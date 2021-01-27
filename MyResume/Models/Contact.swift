@@ -10,6 +10,4 @@ import Foundation
 class Contact: Decodable {
     let phone: String
     let email: String
-    let linkedin: String
-    let city: String
 }

@@ -13,4 +13,5 @@ class PersonalInformations: Decodable {
     let jobTitle: String
     let photo: String
     let contact: Contact
+    let socialNetworks: [SocialNetwork]
 }
