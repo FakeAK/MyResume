@@ -114,7 +114,7 @@ final class ExperienceCardListCollectionViewCell: CardListCollectionViewCell {
                 self.companyNameLabel.snp.updateConstraints { (label) in
                     label.top.equalTo(self.companyLogoImageView.snp.bottom).offset(0)
                 }
-                self.jobTitleLabel.snp.makeConstraints { (label) in
+                self.jobTitleLabel.snp.updateConstraints { (label) in
                     label.top.equalTo(self.companyNameLabel.snp.bottom).offset(0)
                 }
                 self.infoContainer.layoutIfNeeded()

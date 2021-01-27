@@ -46,18 +46,18 @@ final class PersonalCardCollectionViewCell: CardListCollectionViewCell {
         
         labelContainer.snp.makeConstraints { (container) in
             container.trailing.leading.equalToSuperview()
-            container.bottom.equalToSuperview()
+            container.bottom.equalToSuperview().inset(bounds.size.height / 8)
         }
         
         fullNameLabel.snp.makeConstraints { (label) in
-            label.top.equalToSuperview().inset(0)
+            label.top.equalToSuperview()
             label.leading.trailing.equalToSuperview().inset(20)
         }
         
         jobTitleLabel.snp.makeConstraints { (label) in
             label.top.equalTo(fullNameLabel.snp.bottom).offset(20)
             label.leading.trailing.equalToSuperview().inset(20)
-            label.bottom.equalToSuperview().inset(bounds.size.height / 8)
+            label.bottom.equalToSuperview()
         }
     }
     
@@ -83,7 +83,7 @@ final class PersonalCardCollectionViewCell: CardListCollectionViewCell {
                 self.fullNameLabel.snp.updateConstraints { (label) in
                     label.top.equalToSuperview().inset(10)
                 }
-                self.jobTitleLabel.snp.makeConstraints { (label) in
+                self.jobTitleLabel.snp.updateConstraints { (label) in
                     label.top.equalTo(self.fullNameLabel.snp.bottom).offset(0)
                 }
                 self.labelContainer.layoutIfNeeded()
