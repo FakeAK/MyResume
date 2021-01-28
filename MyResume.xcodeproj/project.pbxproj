@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		274B9B8CF1D78A132FA99473 /* Pods_MyResume_MyResumeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FCE60775C8C3C1AAA1B1222 /* Pods_MyResume_MyResumeUITests.framework */; };
 		412A777125C1B1AA00451C41 /* SocialNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412A777025C1B1AA00451C41 /* SocialNetwork.swift */; };
+		412A777625C3339100451C41 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412A777525C3339100451C41 /* ActivityView.swift */; };
 		4136E43B25B5D7E600D56ABB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4136E43A25B5D7E600D56ABB /* AppDelegate.swift */; };
 		4136E43D25B5D7E600D56ABB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4136E43C25B5D7E600D56ABB /* SceneDelegate.swift */; };
 		4136E44125B5D7E900D56ABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4136E44025B5D7E900D56ABB /* Assets.xcassets */; };
@@ -74,6 +75,7 @@
 		1FD29E4D5FCF3A2D34B8CAEC /* Pods-MyResume-MyResumeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyResume-MyResumeUITests.release.xcconfig"; path = "Target Support Files/Pods-MyResume-MyResumeUITests/Pods-MyResume-MyResumeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2904FCBDA59884B5D09D14DB /* Pods-MyResumeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyResumeTests.debug.xcconfig"; path = "Target Support Files/Pods-MyResumeTests/Pods-MyResumeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		412A777025C1B1AA00451C41 /* SocialNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetwork.swift; sourceTree = "<group>"; };
+		412A777525C3339100451C41 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		4136E43725B5D7E600D56ABB /* MyResume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyResume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4136E43A25B5D7E600D56ABB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4136E43C25B5D7E600D56ABB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 			children = (
 				41CE1FD925BB2A8C00C1926A /* PersonalCardDetailsView.swift */,
 				41CE1FFB25C05E5D00C1926A /* CallToActionButtonsView.swift */,
+				412A777525C3339100451C41 /* ActivityView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -685,6 +688,7 @@
 				41CE1FA925B8D27A00C1926A /* CardListCollectionViewControllerDelegate.swift in Sources */,
 				418169A425B7735E005B2143 /* PersonalInformations.swift in Sources */,
 				4181695625B60994005B2143 /* Colors.swift in Sources */,
+				412A777625C3339100451C41 /* ActivityView.swift in Sources */,
 				4136E43B25B5D7E600D56ABB /* AppDelegate.swift in Sources */,
 				4136E48925B5DF1400D56ABB /* Resume.swift in Sources */,
 				41CE1FE325BB428E00C1926A /* Transition.swift in Sources */,

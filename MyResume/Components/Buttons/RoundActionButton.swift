@@ -11,23 +11,12 @@ import SwiftUI
 
 struct RoundActionButton: View {
     
-    @Environment(\.openURL) var openURL
-    
-    var url: URL
-    var socialNetwork: SocialNetwork
-    
-    enum SocialNetwork: String {
-        case facebook
-        case twitter
-        case instagram
-        case linkedin
-        case github
-        case website
-    }
+    var action: (() -> ())
+    var icon: Image
     
     var body: some View {
         Button(action: {
-            openURL(url)
+            action()
         }) {
             ZStack {
                 LinearGradient(
@@ -36,7 +25,7 @@ struct RoundActionButton: View {
                     endPoint: .bottom
                 )
                 .mask(
-                    SocialNetworkIcon()
+                    icon
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 30, height: 30, alignment: .center)
@@ -55,16 +44,5 @@ struct RoundActionButton: View {
                     lineWidth: 1
                 )
         )
-    }
-    
-    func SocialNetworkIcon() -> Image {
-        switch socialNetwork {
-        case .linkedin:
-            return Image("linkedin_logo")
-        case .github:
-            return Image("github_logo")
-        default:
-            return Image("")
-        }
     }
 }
