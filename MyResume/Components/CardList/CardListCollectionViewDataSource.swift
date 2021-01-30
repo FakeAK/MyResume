@@ -55,6 +55,9 @@ class CardListCollectionViewDataSource<cell: UICollectionViewCell, T>: NSObject,
             cell.companyNameLabel.text = experience.company.name
             cell.jobTitleLabel.text = experience.jobTitle
             cell.dateLabel.text = "\(Date.getShortDateAsString(from: experience.from)) - \(Date.getShortDateAsString(from: experience.to))"
+            cell.companyLogoImageView.sd_setImage(with: URL(string: experience.company.logo)!) { (image, _, _, _) in
+                cell.companyLogoImageView.image = image?.withRenderingMode(.alwaysTemplate)
+            }
             return cell
         default:
             return collectionView.dequeueReusableCell(

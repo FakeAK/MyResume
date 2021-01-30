@@ -47,7 +47,7 @@ struct CallToSocialButtonsView: View {
         }
         .frame(width: UIScreen.main.bounds.width, height: 100, alignment: .center)
         .sheet(isPresented: $shouldShowActivityView) {
-            ActivityView(activityItems: ["https://linkedin.com/in/arthurkleiber", FileHelper.shared.resumePdfFilePath], applicationActivities: nil)
+            ActivityView(activityItems: getActivityItemsToShare(), applicationActivities: nil)
         }
     }
     
@@ -61,5 +61,15 @@ struct CallToSocialButtonsView: View {
         default:
             return Image("")
         }
+    }
+    
+    func getActivityItemsToShare() -> [Any] {
+        if let pdfResumeFilePath = FileHelper.shared.resumePdfFilePath, FileHelper.shared.fileExists(filePath: pdfResumeFilePath) {
+            return [pdfResumeFilePath]
+        } else if let urlToShare = URL(string: LINKEDIN_PROFILE_URL) {
+            return [urlToShare]
+        }
+        
+        return []
     }
 }

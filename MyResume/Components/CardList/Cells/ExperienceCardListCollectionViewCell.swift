@@ -83,8 +83,8 @@ final class ExperienceCardListCollectionViewCell: CardListCollectionViewCell {
         imageView.image = #imageLiteral(resourceName: "office1")
         
         companyLogoImageView.alpha = 0
-        companyLogoImageView.image = #imageLiteral(resourceName: "logo_jin_white")
         companyLogoImageView.contentMode = .scaleAspectFit
+        companyLogoImageView.tintColor = .white
         
         companyNameLabel.textColor = .white
         companyNameLabel.textAlignment = .center

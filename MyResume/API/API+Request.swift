@@ -16,7 +16,7 @@ extension API {
         var request: URLRequest = URLRequest(url: url)
         request.cachePolicy = .reloadIgnoringLocalCacheData
         request.httpMethod = method.rawValue
-//        request.setValue("Bearer \(UserHelper.default.accessToken)", forHTTPHeaderField: HTTPHeaderField.authorization)
+        //        request.setValue("Bearer \(UserHelper.default.accessToken)", forHTTPHeaderField: HTTPHeaderField.authorization)
         request.setValue(ContentType.json, forHTTPHeaderField: HTTPHeaderField.contentType)
         
         if let parameters = parameters, let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) {
