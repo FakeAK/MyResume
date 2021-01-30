@@ -35,6 +35,26 @@ extension API {
             .eraseToAnyPublisher()
     }
     
+    static func download(_ url: URL, completion: @escaping ((URL) -> ())) {
+        let task = URLSession.shared.downloadTask(with: url) { localURL, urlResponse, error in
+            guard let fileLocation = localURL else { return }
+            
+            let docsPath = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
+            let destinationPath = docsPath.appendingPathComponent(url.lastPathComponent)
+            
+            try? FileManager.default.removeItem(at: destinationPath)
+            
+            do {
+                try FileManager.default.copyItem(at: fileLocation, to: destinationPath)
+                completion(destinationPath)
+            } catch {
+                print(error)
+            }
+        }
+        
+        task.resume()
+    }
+    
     static func handleAPIResponse(response: URLResponse) throws {
         guard let httpResponse = response as? HTTPURLResponse else {
             throw APIError(statusCode: 500, code: "", message: "")

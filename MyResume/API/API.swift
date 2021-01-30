@@ -10,6 +10,7 @@ import Foundation
 class API {
     
     static let ROOT_URL = "https://09794fa8-c435-4492-8d8d-37fe033c538e.mock.pstmn.io"
+    static let CV_PDF_URL = "https://cv-pool-bucket.s3.eu-west-3.amazonaws.com/CV_Arthur_Kleiber_2021_EN.pdf"
     
     enum HTTPMethod: String {
         case post

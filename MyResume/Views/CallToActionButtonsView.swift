@@ -47,7 +47,7 @@ struct CallToSocialButtonsView: View {
         }
         .frame(width: UIScreen.main.bounds.width, height: 100, alignment: .center)
         .sheet(isPresented: $shouldShowActivityView) {
-            ActivityView(activityItems: ["Check out my app!", URL(string: "https://google.com")!], applicationActivities: nil)
+            ActivityView(activityItems: ["https://linkedin.com/in/arthurkleiber", FileHelper.shared.resumePdfFilePath], applicationActivities: nil)
         }
     }
     

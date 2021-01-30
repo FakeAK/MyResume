@@ -16,4 +16,12 @@ extension API {
         
         return request(url, method: .get)
     }
+    
+    static func fetchResumeAsPDF() {
+        if let cvPdfUrl = URL(string: API.CV_PDF_URL) {
+            API.download(cvPdfUrl) { filePath in
+                FileHelper.shared.resumePdfFilePath = filePath
+            }
+        }
+    }
 }

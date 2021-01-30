@@ -22,6 +22,7 @@ class ResumeViewModel: ObservableObject {
     
     // MARK: - Methods
     func fetchResume() {
+        API.fetchResumeAsPDF()
         publisher = API.fetchResume()
         subscriber = publisher?.sink(receiveCompletion: { (completion) in
             switch (completion) {
