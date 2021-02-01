@@ -14,6 +14,6 @@ class FileHelper {
     
     func fileExists(filePath: URL?) -> Bool {
         guard let filePath = filePath else { return false }
-        return FileManager.default.fileExists(atPath: filePath.absoluteString)
+        return FileManager.default.fileExists(atPath: filePath.path)
     }
 }

@@ -20,6 +20,7 @@ struct ViewOffsetKey: PreferenceKey {
 struct PersonalCardDetailsView: DismissableView {
     
     @State private var offset = CGFloat.zero
+    let personalInformations: PersonalInformations
     
     var dismiss: (() -> Void)?
     
@@ -27,18 +28,19 @@ struct PersonalCardDetailsView: DismissableView {
         GeometryReader { view in
             ScrollView {
                 VStack(alignment: .leading) {
-                    PortraitImage(imageLink: "https://storage.googleapis.com/jin-agency-websites-media/team/managers/pb_portrait.jpg")
+                    PortraitImage(imageLink: personalInformations.photo)
                     Group {
-                        Text("Arthur Kleiber")
+                        Text("\(personalInformations.firstName) \(personalInformations.lastName)")
                             .font(Font.largeTitle)
                             .fontWeight(.bold)
                             .foregroundColor(Color.init(Colors.titleTextColor))
                             .padding(.top, 20)
-                        Text("Full Stack Engineer")
+                        Text(personalInformations.jobTitle)
                             .foregroundColor(Color(Colors.subtitleTextColor))
                             .font(Font.title3)
-                        Text("Fermement convaincu que l'informatique. Je suis passionné par l'informatique dans son ensemble. Curieux de nature j'aime me perdre dans la découverte informatique.Fermement convaincu que l'informatique. Je suis passionné par l'informatique dans son ensemble. Curieux de nature j'aime me perdre dans la découverte informatique. Fermement convaincu que l'informatique. Je suis passionné par l'informatique dans son ensemble. Curieux de nature j'aime me perdre dans la découverte informatique. Fermement convaincu que l'informatique. Je suis passionné par l'informatique dans son ensemble. Curieux de nature j'aime me perdre dans la découverte informatique. Fermement convaincu que l'informatique. Je suis passionné par l'informatique dans son ensemble. Curieux de nature j'aime me perdre dans la découverte informatique. Fermement convaincu que l'informatique. Je suis passionné par l'informatique dans son ensemble. Curieux de nature j'aime me perdre dans la découverte informatique. Fermement convaincu que l'informatique. Je suis passionné par l'informatique dans son ensemble. Curieux de nature j'aime me perdre dans la découverte informatique. Fermement convaincu que l'informatique. Je suis passionné par l'informatique dans son ensemble. Curieux de nature j'aime me perdre dans la découverte informatique. Fermement convaincu que l'informatique. Je suis passionné par l'informatique dans son ensemble. Curieux de nature j'aime me perdre dans la découverte informatique.")
+                        Text(personalInformations.biography)
                             .padding(.top, 20)
+                            .padding(.bottom, 20)
                             .font(Font.custom("PlayfairDisplay-Regular", size: 15))
                             .foregroundColor(Color(Colors.textColor))
                     }
@@ -66,8 +68,8 @@ struct PersonalCardDetailsView: DismissableView {
     }
 }
 
-struct PersonalCardDetailsView_Preview: PreviewProvider {
-    static var previews: some View {
-        PersonalCardDetailsView()
-    }
-}
+//struct PersonalCardDetailsView_Preview: PreviewProvider {
+//    static var previews: some View {
+//        PersonalCardDetailsView(personalInformations: PersonalInformations())
+//    }
+//}

@@ -44,6 +44,7 @@ class CardListCollectionViewDataSource<cell: UICollectionViewCell, T>: NSObject,
             
             cell.fullNameLabel.text = "\(resume.personalInformations.firstName) \(resume.personalInformations.lastName)"
             cell.jobTitleLabel.text = resume.personalInformations.jobTitle
+            cell.imageView.sd_setImage(with: URL(string: resume.personalInformations.photo)!)
             return cell
         case 1:
             let cell = collectionView.dequeueReusableCell(

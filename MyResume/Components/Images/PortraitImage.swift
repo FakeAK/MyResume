@@ -17,7 +17,7 @@ struct PortraitImage: View {
                 .resizable()
                 .transition(.fade(duration: 0.5))
                 .scaledToFill()
-                .overlay(Color(Colors.blueOverlay).opacity(0.4))
+                .overlay(Color(Colors.blueOverlay))
         }
     }
 }

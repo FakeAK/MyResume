@@ -15,5 +15,6 @@ class Experience: Decodable {
     let company: Company
     let tasksDone: [String]
     let technologiesUsed: [String]
+    let screenshots: [Screenshot]?
     let description: String?
 }

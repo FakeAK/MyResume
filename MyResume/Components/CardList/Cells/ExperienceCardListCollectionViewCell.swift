@@ -20,6 +20,7 @@ final class ExperienceCardListCollectionViewCell: CardListCollectionViewCell {
     let dateLabel = UILabel()
     
     
+    // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
 
@@ -40,6 +41,8 @@ final class ExperienceCardListCollectionViewCell: CardListCollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    // MARK: - Methods
     private func makeCellLayout() {
         imageView.snp.makeConstraints { (imageView) in
             imageView.edges.equalToSuperview()

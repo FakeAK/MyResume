@@ -9,8 +9,9 @@ import Foundation
 import UIKit
 
 class Colors {
-    static let blueOverlay = #colorLiteral(red: 0.1610920727, green: 0.6079360247, blue: 0.9723554254, alpha: 1)
+    static let blueOverlay = UIColor(red: 0, green: 0, blue: 1, alpha: 0.4)
     static let shadowCard = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+    static let shadowScreenshot = #colorLiteral(red: 0.8392156863, green: 0.8392156863, blue: 0.8392156863, alpha: 1)
     
     // MARK: - Text Colors
     static let titleTextColor = #colorLiteral(red: 0.1509063244, green: 0.1617739499, blue: 0.1774529219, alpha: 1)

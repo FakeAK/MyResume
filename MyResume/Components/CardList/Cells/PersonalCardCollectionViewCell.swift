@@ -63,7 +63,6 @@ final class PersonalCardCollectionViewCell: CardListCollectionViewCell {
     
     private func makeCellStyle() {
         imageView.contentMode = .scaleAspectFill
-        imageView.image = #imageLiteral(resourceName: "akleiber")
         fullNameLabel.textColor = .white
         fullNameLabel.textAlignment = .center
         fullNameLabel.alpha = 0
@@ -72,7 +71,7 @@ final class PersonalCardCollectionViewCell: CardListCollectionViewCell {
         jobTitleLabel.textColor = .white
         jobTitleLabel.textAlignment = .center
         jobTitleLabel.alpha = 0
-        filterView.backgroundColor = UIColor(red: 0, green: 0, blue: 1, alpha: 0.4)
+        filterView.backgroundColor = Colors.blueOverlay
     }
     
     private func animate() {

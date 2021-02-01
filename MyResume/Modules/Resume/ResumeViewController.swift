@@ -96,9 +96,31 @@ class ResumeViewController: UIViewController {
 
 extension ResumeViewController: CardListCollectionViewControllerDelegate {
     func didSelectCard(at indexPath: IndexPath) {
-        let cardDetailsVC = HostingViewController<PersonalCardDetailsView>(
-            bridgeViewController: UIHostingController(rootView: PersonalCardDetailsView())
-        )
+        guard let resume = viewModel.resume else { return }
+        var cardDetailsVC: UIViewController
+        
+        switch indexPath.section {
+        case 0:
+            cardDetailsVC = HostingViewController(
+                bridgeViewController: UIHostingController(
+                    rootView: PersonalCardDetailsView(
+                        personalInformations: resume.personalInformations
+                    )
+                )
+            )
+        case 1:
+            cardDetailsVC = HostingViewController(
+                bridgeViewController: UIHostingController(
+                    rootView: ExperienceCardDetailsView(
+                        experience: resume.experiences[indexPath.row]
+                    )
+                )
+            )
+        default:
+            return
+        }
+        
+        
         cardDetailsVC.transitioningDelegate = self
         cardDetailsVC.modalPresentationStyle = .custom
         

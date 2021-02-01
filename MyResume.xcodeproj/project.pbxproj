@@ -8,10 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		274B9B8CF1D78A132FA99473 /* Pods_MyResume_MyResumeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FCE60775C8C3C1AAA1B1222 /* Pods_MyResume_MyResumeUITests.framework */; };
+		411E0A9825C820880050992E /* LinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411E0A9725C820880050992E /* LinkButton.swift */; };
+		411E0A9E25C8211A0050992E /* ExperienceHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411E0A9D25C8211A0050992E /* ExperienceHeader.swift */; };
+		411E0AA625C8431F0050992E /* Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411E0AA525C8431F0050992E /* Screenshot.swift */; };
 		412A777125C1B1AA00451C41 /* SocialNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412A777025C1B1AA00451C41 /* SocialNetwork.swift */; };
 		412A777625C3339100451C41 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412A777525C3339100451C41 /* ActivityView.swift */; };
 		412A777B25C3712F00451C41 /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412A777A25C3712F00451C41 /* FileHelper.swift */; };
 		412A778025C5BB6F00451C41 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412A777F25C5BB6F00451C41 /* Const.swift */; };
+		412A778525C705E300451C41 /* ExperienceCardDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412A778425C705E300451C41 /* ExperienceCardDetailsView.swift */; };
+		412A778D25C7300200451C41 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412A778C25C7300200451C41 /* View.swift */; };
+		412A779225C74BB800451C41 /* ScreenshotImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412A779125C74BB800451C41 /* ScreenshotImage.swift */; };
 		4136E43B25B5D7E600D56ABB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4136E43A25B5D7E600D56ABB /* AppDelegate.swift */; };
 		4136E43D25B5D7E600D56ABB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4136E43C25B5D7E600D56ABB /* SceneDelegate.swift */; };
 		4136E44125B5D7E900D56ABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4136E44025B5D7E900D56ABB /* Assets.xcassets */; };
@@ -76,10 +82,16 @@
 /* Begin PBXFileReference section */
 		1FD29E4D5FCF3A2D34B8CAEC /* Pods-MyResume-MyResumeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyResume-MyResumeUITests.release.xcconfig"; path = "Target Support Files/Pods-MyResume-MyResumeUITests/Pods-MyResume-MyResumeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2904FCBDA59884B5D09D14DB /* Pods-MyResumeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyResumeTests.debug.xcconfig"; path = "Target Support Files/Pods-MyResumeTests/Pods-MyResumeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		411E0A9725C820880050992E /* LinkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkButton.swift; sourceTree = "<group>"; };
+		411E0A9D25C8211A0050992E /* ExperienceHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceHeader.swift; sourceTree = "<group>"; };
+		411E0AA525C8431F0050992E /* Screenshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screenshot.swift; sourceTree = "<group>"; };
 		412A777025C1B1AA00451C41 /* SocialNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetwork.swift; sourceTree = "<group>"; };
 		412A777525C3339100451C41 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		412A777A25C3712F00451C41 /* FileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
 		412A777F25C5BB6F00451C41 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		412A778425C705E300451C41 /* ExperienceCardDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceCardDetailsView.swift; sourceTree = "<group>"; };
+		412A778C25C7300200451C41 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		412A779125C74BB800451C41 /* ScreenshotImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotImage.swift; sourceTree = "<group>"; };
 		4136E43725B5D7E600D56ABB /* MyResume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyResume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4136E43A25B5D7E600D56ABB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4136E43C25B5D7E600D56ABB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +175,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		411E0A9C25C8210C0050992E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				411E0A9D25C8211A0050992E /* ExperienceHeader.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		4136E42E25B5D7E600D56ABB = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +283,7 @@
 				41CE1FB725B9A58100C1926A /* Contact.swift */,
 				41CE1FBC25B9A58E00C1926A /* Company.swift */,
 				412A777025C1B1AA00451C41 /* SocialNetwork.swift */,
+				411E0AA525C8431F0050992E /* Screenshot.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -282,6 +303,7 @@
 		4136E49125B5F0C700D56ABB /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				411E0A9C25C8210C0050992E /* Views */,
 				41CE200025C05F4C00C1926A /* Buttons */,
 				418169D125B88AF2005B2143 /* CardList */,
 				4181694B25B6054F005B2143 /* Images */,
@@ -310,6 +332,7 @@
 		4181694725B60507005B2143 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				412A778425C705E300451C41 /* ExperienceCardDetailsView.swift */,
 				41CE1FD925BB2A8C00C1926A /* PersonalCardDetailsView.swift */,
 				41CE1FFB25C05E5D00C1926A /* CallToActionButtonsView.swift */,
 				412A777525C3339100451C41 /* ActivityView.swift */,
@@ -321,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				4181694C25B60561005B2143 /* PortraitImage.swift */,
+				412A779125C74BB800451C41 /* ScreenshotImage.swift */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -347,6 +371,7 @@
 			children = (
 				4181695C25B622DE005B2143 /* UIViewController.swift */,
 				41CE1FD125BB126100C1926A /* Date.swift */,
+				412A778C25C7300200451C41 /* View.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -417,6 +442,7 @@
 			isa = PBXGroup;
 			children = (
 				41CE200125C05F5E00C1926A /* RoundActionButton.swift */,
+				411E0A9725C820880050992E /* LinkButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -685,12 +711,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				411E0A9E25C8211A0050992E /* ExperienceHeader.swift in Sources */,
 				4181694025B604F1005B2143 /* FullNameJobOverlay.swift in Sources */,
 				41CE1FCD25BAEF7000C1926A /* ExperienceCardListCollectionViewCell.swift in Sources */,
 				41CE1FB825B9A58100C1926A /* Contact.swift in Sources */,
 				418169B125B77D2D005B2143 /* API+Routes.swift in Sources */,
 				41CE1FB325B99EF800C1926A /* Experience.swift in Sources */,
 				41CE1FAE25B99BF800C1926A /* CardListCollectionViewDataSource.swift in Sources */,
+				412A778D25C7300200451C41 /* View.swift in Sources */,
 				41CE1FA925B8D27A00C1926A /* CardListCollectionViewControllerDelegate.swift in Sources */,
 				418169A425B7735E005B2143 /* PersonalInformations.swift in Sources */,
 				4181695625B60994005B2143 /* Colors.swift in Sources */,
@@ -708,10 +736,13 @@
 				412A777B25C3712F00451C41 /* FileHelper.swift in Sources */,
 				4136E43D25B5D7E600D56ABB /* SceneDelegate.swift in Sources */,
 				41CE1FC225B9CAA700C1926A /* PersonalCardCollectionViewCell.swift in Sources */,
+				411E0AA625C8431F0050992E /* Screenshot.swift in Sources */,
 				41CE200225C05F5E00C1926A /* RoundActionButton.swift in Sources */,
 				4136E49425B5F0E500D56ABB /* CardView.swift in Sources */,
 				418169B925B78D33005B2143 /* API+Errors.swift in Sources */,
 				4181699225B73B92005B2143 /* API.swift in Sources */,
+				412A779225C74BB800451C41 /* ScreenshotImage.swift in Sources */,
+				412A778525C705E300451C41 /* ExperienceCardDetailsView.swift in Sources */,
 				41CE1FA025B8CA7D00C1926A /* CardListCollectionViewCell.swift in Sources */,
 				41CE1FED25BB7ACD00C1926A /* HostingViewController.swift in Sources */,
 				41CE1FD225BB126100C1926A /* Date.swift in Sources */,
@@ -719,6 +750,7 @@
 				418169AC25B779D4005B2143 /* API+Resume.swift in Sources */,
 				4181694D25B60561005B2143 /* PortraitImage.swift in Sources */,
 				412A777125C1B1AA00451C41 /* SocialNetwork.swift in Sources */,
+				411E0A9825C820880050992E /* LinkButton.swift in Sources */,
 				4181699F25B76ECB005B2143 /* API+Request.swift in Sources */,
 				41CE1FDA25BB2A8C00C1926A /* PersonalCardDetailsView.swift in Sources */,
 			);
@@ -894,11 +926,13 @@
 				DEVELOPMENT_TEAM = KB6H8JGYUZ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MyResume/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = arthurkleiber.MyResume;
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arthurkleiber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -916,11 +950,13 @@
 				DEVELOPMENT_TEAM = KB6H8JGYUZ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MyResume/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = arthurkleiber.MyResume;
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arthurkleiber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
