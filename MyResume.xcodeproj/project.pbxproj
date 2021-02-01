@@ -29,7 +29,6 @@
 		4136E47925B5D84600D56ABB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4136E47825B5D84600D56ABB /* .gitignore */; };
 		4136E48025B5DBB700D56ABB /* ResumeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4136E47F25B5DBB700D56ABB /* ResumeViewModel.swift */; };
 		4136E48925B5DF1400D56ABB /* Resume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4136E48825B5DF1400D56ABB /* Resume.swift */; };
-		4136E49425B5F0E500D56ABB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4136E49325B5F0E500D56ABB /* CardView.swift */; };
 		4181694025B604F1005B2143 /* FullNameJobOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4181693F25B604F1005B2143 /* FullNameJobOverlay.swift */; };
 		4181694D25B60561005B2143 /* PortraitImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4181694C25B60561005B2143 /* PortraitImage.swift */; };
 		4181695625B60994005B2143 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4181695525B60994005B2143 /* Colors.swift */; };
@@ -109,7 +108,6 @@
 		4136E47825B5D84600D56ABB /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		4136E47F25B5DBB700D56ABB /* ResumeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeViewModel.swift; sourceTree = "<group>"; };
 		4136E48825B5DF1400D56ABB /* Resume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resume.swift; sourceTree = "<group>"; };
-		4136E49325B5F0E500D56ABB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		4181693F25B604F1005B2143 /* FullNameJobOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullNameJobOverlay.swift; sourceTree = "<group>"; };
 		4181694C25B60561005B2143 /* PortraitImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortraitImage.swift; sourceTree = "<group>"; };
 		4181695525B60994005B2143 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -308,17 +306,8 @@
 				418169D125B88AF2005B2143 /* CardList */,
 				4181694B25B6054F005B2143 /* Images */,
 				4181693E25B604BB005B2143 /* Overlays */,
-				4136E49225B5F0D200D56ABB /* Card */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		4136E49225B5F0D200D56ABB /* Card */ = {
-			isa = PBXGroup;
-			children = (
-				4136E49325B5F0E500D56ABB /* CardView.swift */,
-			);
-			path = Card;
 			sourceTree = "<group>";
 		};
 		4181693E25B604BB005B2143 /* Overlays */ = {
@@ -738,7 +727,6 @@
 				41CE1FC225B9CAA700C1926A /* PersonalCardCollectionViewCell.swift in Sources */,
 				411E0AA625C8431F0050992E /* Screenshot.swift in Sources */,
 				41CE200225C05F5E00C1926A /* RoundActionButton.swift in Sources */,
-				4136E49425B5F0E500D56ABB /* CardView.swift in Sources */,
 				418169B925B78D33005B2143 /* API+Errors.swift in Sources */,
 				4181699225B73B92005B2143 /* API.swift in Sources */,
 				412A779225C74BB800451C41 /* ScreenshotImage.swift in Sources */,
