@@ -41,6 +41,7 @@ struct ExperienceCardDetailsView: DismissableView {
                                     .underline()
                                     .font(Font.system(size: 17))
                                     .foregroundColor(Color(Colors.textColor))
+                                    .padding(.top, 20)
                                 ForEach(experience.tasksDone, id: \.self) { task in
                                     HStack(alignment: .top) {
                                         Text("•")

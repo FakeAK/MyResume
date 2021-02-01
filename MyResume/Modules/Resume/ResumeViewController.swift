@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 import SwiftUI
 import Combine
-import BubbleTransition
 import SnapKit
 
 class ResumeViewController: UIViewController {
