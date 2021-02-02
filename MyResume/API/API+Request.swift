@@ -16,7 +16,6 @@ extension API {
         var request: URLRequest = URLRequest(url: url)
         request.cachePolicy = .reloadIgnoringLocalCacheData
         request.httpMethod = method.rawValue
-        //        request.setValue("Bearer \(UserHelper.default.accessToken)", forHTTPHeaderField: HTTPHeaderField.authorization)
         request.setValue(ContentType.json, forHTTPHeaderField: HTTPHeaderField.contentType)
         
         if let parameters = parameters, let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) {
@@ -31,6 +30,13 @@ extension API {
                 let decodedData = try decoder.decode(T.self, from: data)
                 return APIResponse(value: decodedData, response: response)
             }
+            .mapError({ (error) -> Error in
+                if let error = error as? APIError {
+                    return error
+                }
+                
+                return buildError(error)
+            })
             .receive(on: RunLoop.main)
             .eraseToAnyPublisher()
     }
@@ -57,14 +63,26 @@ extension API {
     
     static func handleAPIResponse(response: URLResponse) throws {
         guard let httpResponse = response as? HTTPURLResponse else {
-            throw APIError(statusCode: 500, code: "", message: "")
+            throw APIError(statusCode: 500, code: "INTERNAL_ERROR", message: "An internal error occured.")
         }
         
         switch httpResponse.statusCode {
         case 404:
-            throw RessourceNotFoundError(code: "RESSOURCE.NOT_FOUND", message: "") // replace "" with api message
+            throw RessourceNotFoundError(code: "RESSOURCE.NOT_FOUND", message: "Ressource not found")
         default:
             return
         }
+    }
+    
+    static func buildError(_ error: Error) -> Error {
+        if error is DecodingError {
+            return APIError(
+                statusCode: 500,
+                code: "RESSOURCE.INVALID",
+                message: "The data returned by the server is invalid. Failure happened while decoding data."
+            )
+        }
+        
+        return error
     }
 }

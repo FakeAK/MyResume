@@ -47,7 +47,15 @@ class ResumeViewController: UIViewController {
         }
         
         viewModel.didGetError = { error in
-            let errorViewController = UIHostingController(rootView: FetchResumeErrorView(message: error.localizedDescription))
+            var message: String
+            
+            if let error = error as? APIError {
+                message = "\(error.statusCode) \(error.message)"
+            } else {
+                message = error.localizedDescription
+            }
+            
+            let errorViewController = UIHostingController(rootView: FetchResumeErrorView(message: message))
             self.view.addSubview(errorViewController.view)
             errorViewController.view.snp.makeConstraints { (view) in
                 view.centerX.centerY.equalToSuperview()
