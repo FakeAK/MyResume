@@ -22,7 +22,6 @@ class API {
     typealias HTTPHeaders = [String: String]
     static var headers: HTTPHeaders = [
         HTTPHeaderField.contentType: "application/json"
-//        HTTPHeaderField.authorization: "Bearer \(UserHelper.default.accessToken)"
     ]
 
     struct HTTPHeaderField {

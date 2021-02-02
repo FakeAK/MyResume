@@ -47,7 +47,7 @@ struct ExperienceHeader: View {
                 .font(Font.system(size: 20))
                 .fontWeight(.semibold)
                 .foregroundColor(Color(Colors.titleTextColor))
-            Text("April 2020 - Juin 2021")
+            Text("\(Date.getShortDateAsString(from: experience.from)) - \(Date.getShortDateAsString(from: experience.to))")
                 .font(Font.system(size: 15))
                 .padding(.top, 20)
                 .foregroundColor(Color(Colors.subtitleTextColor))
