@@ -42,6 +42,9 @@
 		418169B125B77D2D005B2143 /* API+Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418169B025B77D2D005B2143 /* API+Routes.swift */; };
 		418169B925B78D33005B2143 /* API+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418169B825B78D33005B2143 /* API+Errors.swift */; };
 		418169D325B88B05005B2143 /* CardListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418169D225B88B05005B2143 /* CardListCollectionViewController.swift */; };
+		419C444625C99795004ADD2D /* Error.json in Resources */ = {isa = PBXBuildFile; fileRef = 419C444525C99795004ADD2D /* Error.json */; };
+		419C444E25C99B16004ADD2D /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C444D25C99B16004ADD2D /* LottieView.swift */; };
+		419C445325C99B79004ADD2D /* FetchResumeErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C445225C99B79004ADD2D /* FetchResumeErrorView.swift */; };
 		41CE1FA025B8CA7D00C1926A /* CardListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CE1F9F25B8CA7D00C1926A /* CardListCollectionViewCell.swift */; };
 		41CE1FA925B8D27A00C1926A /* CardListCollectionViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CE1FA825B8D27A00C1926A /* CardListCollectionViewControllerDelegate.swift */; };
 		41CE1FAE25B99BF800C1926A /* CardListCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CE1FAD25B99BF800C1926A /* CardListCollectionViewDataSource.swift */; };
@@ -121,6 +124,9 @@
 		418169B025B77D2D005B2143 /* API+Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Routes.swift"; sourceTree = "<group>"; };
 		418169B825B78D33005B2143 /* API+Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Errors.swift"; sourceTree = "<group>"; };
 		418169D225B88B05005B2143 /* CardListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListCollectionViewController.swift; sourceTree = "<group>"; };
+		419C444525C99795004ADD2D /* Error.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Error.json; sourceTree = "<group>"; };
+		419C444D25C99B16004ADD2D /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		419C445225C99B79004ADD2D /* FetchResumeErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchResumeErrorView.swift; sourceTree = "<group>"; };
 		41CE1F9F25B8CA7D00C1926A /* CardListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListCollectionViewCell.swift; sourceTree = "<group>"; };
 		41CE1FA825B8D27A00C1926A /* CardListCollectionViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListCollectionViewControllerDelegate.swift; sourceTree = "<group>"; };
 		41CE1FAD25B99BF800C1926A /* CardListCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListCollectionViewDataSource.swift; sourceTree = "<group>"; };
@@ -177,6 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				411E0A9D25C8211A0050992E /* ExperienceHeader.swift */,
+				419C444D25C99B16004ADD2D /* LottieView.swift */,
+				419C445225C99B79004ADD2D /* FetchResumeErrorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -206,6 +214,7 @@
 		4136E43925B5D7E600D56ABB /* MyResume */ = {
 			isa = PBXGroup;
 			children = (
+				419C444325C99779004ADD2D /* Animations */,
 				4136E48D25B5DF7E00D56ABB /* API */,
 				4136E49125B5F0C700D56ABB /* Components */,
 				41CE1FEA25BB7ABC00C1926A /* Common */,
@@ -374,6 +383,22 @@
 				41CE1FAD25B99BF800C1926A /* CardListCollectionViewDataSource.swift */,
 			);
 			path = CardList;
+			sourceTree = "<group>";
+		};
+		419C444325C99779004ADD2D /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				419C444425C99782004ADD2D /* Lottie */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		419C444425C99782004ADD2D /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				419C444525C99795004ADD2D /* Error.json */,
+			);
+			path = Lottie;
 			sourceTree = "<group>";
 		};
 		41CE1FA425B8CA8100C1926A /* Cells */ = {
@@ -573,6 +598,7 @@
 				4136E44425B5D7E900D56ABB /* Preview Assets.xcassets in Resources */,
 				4136E47425B5D83C00D56ABB /* Podfile in Resources */,
 				4136E44125B5D7E900D56ABB /* Assets.xcassets in Resources */,
+				419C444625C99795004ADD2D /* Error.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -711,12 +737,14 @@
 				41CE1FA925B8D27A00C1926A /* CardListCollectionViewControllerDelegate.swift in Sources */,
 				418169A425B7735E005B2143 /* PersonalInformations.swift in Sources */,
 				4181695625B60994005B2143 /* Colors.swift in Sources */,
+				419C444E25C99B16004ADD2D /* LottieView.swift in Sources */,
 				412A777625C3339100451C41 /* ActivityView.swift in Sources */,
 				4136E43B25B5D7E600D56ABB /* AppDelegate.swift in Sources */,
 				4136E48925B5DF1400D56ABB /* Resume.swift in Sources */,
 				41CE1FE325BB428E00C1926A /* Transition.swift in Sources */,
 				41CE1FFC25C05E5D00C1926A /* CallToActionButtonsView.swift in Sources */,
 				41CE1FBD25B9A58E00C1926A /* Company.swift in Sources */,
+				419C445325C99B79004ADD2D /* FetchResumeErrorView.swift in Sources */,
 				4181696525B6254C005B2143 /* ResumeViewController.swift in Sources */,
 				4181695D25B622DE005B2143 /* UIViewController.swift in Sources */,
 				412A778025C5BB6F00451C41 /* Const.swift in Sources */,

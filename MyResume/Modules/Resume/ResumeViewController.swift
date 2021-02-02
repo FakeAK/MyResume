@@ -10,6 +10,7 @@ import UIKit
 import SwiftUI
 import Combine
 import SnapKit
+import Lottie
 
 class ResumeViewController: UIViewController {
     
@@ -46,9 +47,12 @@ class ResumeViewController: UIViewController {
         }
         
         viewModel.didGetError = { error in
-            print(error)
-            if let error = error as? APIError {
-                // TODO: attach ErrorViewController
+            let errorViewController = UIHostingController(rootView: FetchResumeErrorView(message: error.localizedDescription))
+            self.view.addSubview(errorViewController.view)
+            errorViewController.view.snp.makeConstraints { (view) in
+                view.centerX.centerY.equalToSuperview()
+                view.width.equalToSuperview()
+                view.height.equalTo(200)
             }
         }
     }

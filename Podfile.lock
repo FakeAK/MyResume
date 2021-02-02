@@ -1,4 +1,5 @@
 PODS:
+  - lottie-ios (3.1.8)
   - SDWebImage (5.9.3):
     - SDWebImage/Core (= 5.9.3)
   - SDWebImage/Core (5.9.3)
@@ -7,20 +8,23 @@ PODS:
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
+  - lottie-ios
   - SDWebImageSwiftUI
   - SnapKit (~> 5.0.0)
 
 SPEC REPOS:
   trunk:
+    - lottie-ios
     - SDWebImage
     - SDWebImageSwiftUI
     - SnapKit
 
 SPEC CHECKSUMS:
+  lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
   SDWebImage: a31ee8e90a97303529e03fb0c333eae0eacb88e9
   SDWebImageSwiftUI: 43687ffe232ddd33fe0659498b7ca9884fdd6b35
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 2d724d22cc7a0c86eb06be8e65f0237933a65107
+PODFILE CHECKSUM: b87e198b8d7993876a12347a71a404183f7fb6aa
 
 COCOAPODS: 1.9.3
