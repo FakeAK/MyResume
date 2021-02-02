@@ -17,25 +17,28 @@ struct ExperienceHeader: View {
     
     var body: some View {
         VStack(alignment: .center) {
-            HStack {
-                Spacer()
-                LinearGradient(
-                    gradient: Gradient(colors: [Color(Colors.primaryGradientBlue), Color(Colors.primaryGradientTurquoise)]),
-                    startPoint: .top,
-                    endPoint: .bottom
-                )
-                .mask(
-                    WebImage(url: URL(string: experience.company.logo))
-                        .renderingMode(.template)
-                        .resizable()
-                        .scaledToFit()
-                        .scaleEffect(animationAmount)
-                        .opacity(Double(animationAmount))
-                        .animation(.linear(duration: 0.5))
-                )
-                .frame(width: 100, height: 100, alignment: .center)
-                Spacer()
-            }.padding(.top, 50)
+            if let logoLink = experience.company.logo, let url = URL(string: logoLink) {
+                HStack {
+                    Spacer()
+                    LinearGradient(
+                        gradient: Gradient(colors: [Color(Colors.primaryGradientBlue), Color(Colors.primaryGradientTurquoise)]),
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                    .mask(
+                        WebImage(url: url)
+                            .renderingMode(.template)
+                            .resizable()
+                            .scaledToFit()
+                            .scaleEffect(animationAmount)
+                            .opacity(Double(animationAmount))
+                            .animation(.linear(duration: 0.5))
+                    )
+                    .frame(width: 100, height: 100, alignment: .center)
+                    Spacer()
+                }.padding(.top, 50)
+            }
+            
             Text(experience.company.name)
                 .font(.title)
                 .fontWeight(.bold)

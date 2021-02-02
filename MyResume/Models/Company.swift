@@ -10,6 +10,6 @@ import Foundation
 class Company: Decodable {
     let name: String
     let activity: String
-    let website: String     // link
-    let logo: String        // link
+    let website: String?     // link
+    let logo: String?        // link
 }

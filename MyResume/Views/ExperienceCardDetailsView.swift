@@ -33,6 +33,7 @@ struct ExperienceCardDetailsView: DismissableView {
                                 .padding(.horizontal, 20)
                                 .font(Font.custom("PlayfairDisplay-Regular", size: 15))
                                 .foregroundColor(Color(Colors.textColor))
+                                .fixedSize(horizontal: false, vertical: true)
                         }
                         
                         if experience.tasksDone.count > 0 {
@@ -108,10 +109,12 @@ struct ExperienceCardDetailsView: DismissableView {
                     .padding(.top, 20)
                     
                     // MARK: - Website Centered Button
-                    VStack(alignment: .center) {
-                        LinkButton(link: experience.company.website)
+                    if let websiteLink = experience.company.website {
+                        VStack(alignment: .center) {
+                            LinkButton(link: websiteLink)
+                        }
+                        .padding(20)
                     }
-                    .padding(20)
                 }
                 .background(
                     GeometryReader {
