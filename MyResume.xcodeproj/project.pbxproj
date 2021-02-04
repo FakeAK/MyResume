@@ -23,7 +23,6 @@
 		4136E44125B5D7E900D56ABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4136E44025B5D7E900D56ABB /* Assets.xcassets */; };
 		4136E44425B5D7E900D56ABB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4136E44325B5D7E900D56ABB /* Preview Assets.xcassets */; };
 		4136E44725B5D7E900D56ABB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4136E44525B5D7E900D56ABB /* LaunchScreen.storyboard */; };
-		4136E45225B5D7E900D56ABB /* MyResumeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4136E45125B5D7E900D56ABB /* MyResumeTests.swift */; };
 		4136E45D25B5D7E900D56ABB /* MyResumeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4136E45C25B5D7E900D56ABB /* MyResumeUITests.swift */; };
 		4136E47425B5D83C00D56ABB /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 4136E47325B5D83C00D56ABB /* Podfile */; };
 		4136E47925B5D84600D56ABB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4136E47825B5D84600D56ABB /* .gitignore */; };
@@ -45,6 +44,23 @@
 		419C444625C99795004ADD2D /* Error.json in Resources */ = {isa = PBXBuildFile; fileRef = 419C444525C99795004ADD2D /* Error.json */; };
 		419C444E25C99B16004ADD2D /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C444D25C99B16004ADD2D /* LottieView.swift */; };
 		419C445325C99B79004ADD2D /* FetchResumeErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C445225C99B79004ADD2D /* FetchResumeErrorView.swift */; };
+		419C445925CAE907004ADD2D /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C445825CAE907004ADD2D /* DateTests.swift */; };
+		419C446D25CAF8CF004ADD2D /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CE1FD125BB126100C1926A /* Date.swift */; };
+		419C447125CB09E1004ADD2D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4181699125B73B92005B2143 /* API.swift */; };
+		419C447525CB09E7004ADD2D /* API+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4181699E25B76ECB005B2143 /* API+Request.swift */; };
+		419C447925CB09EB004ADD2D /* API+Resume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418169AB25B779D4005B2143 /* API+Resume.swift */; };
+		419C447D25CB09F1004ADD2D /* API+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418169B825B78D33005B2143 /* API+Errors.swift */; };
+		419C448225CB0D27004ADD2D /* APIRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C448125CB0D27004ADD2D /* APIRequestTests.swift */; };
+		419C448925CB0D60004ADD2D /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4181699925B73C37005B2143 /* APIResponse.swift */; };
+		419C448D25CB0D6D004ADD2D /* API+Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418169B025B77D2D005B2143 /* API+Routes.swift */; };
+		419C449125CB0D80004ADD2D /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412A777A25C3712F00451C41 /* FileHelper.swift */; };
+		419C449525CB0D87004ADD2D /* Resume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4136E48825B5DF1400D56ABB /* Resume.swift */; };
+		419C449925CB0D8A004ADD2D /* PersonalInformations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418169A325B7735E005B2143 /* PersonalInformations.swift */; };
+		419C449D25CB0D8F004ADD2D /* Experience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CE1FB225B99EF800C1926A /* Experience.swift */; };
+		419C44A125CB0D91004ADD2D /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CE1FB725B9A58100C1926A /* Contact.swift */; };
+		419C44A525CB0D93004ADD2D /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CE1FBC25B9A58E00C1926A /* Company.swift */; };
+		419C44A925CB0D95004ADD2D /* SocialNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412A777025C1B1AA00451C41 /* SocialNetwork.swift */; };
+		419C44AD25CB0D97004ADD2D /* Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411E0AA525C8431F0050992E /* Screenshot.swift */; };
 		41CE1FA025B8CA7D00C1926A /* CardListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CE1F9F25B8CA7D00C1926A /* CardListCollectionViewCell.swift */; };
 		41CE1FA925B8D27A00C1926A /* CardListCollectionViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CE1FA825B8D27A00C1926A /* CardListCollectionViewControllerDelegate.swift */; };
 		41CE1FAE25B99BF800C1926A /* CardListCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CE1FAD25B99BF800C1926A /* CardListCollectionViewDataSource.swift */; };
@@ -102,7 +118,6 @@
 		4136E44625B5D7E900D56ABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4136E44825B5D7E900D56ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4136E44D25B5D7E900D56ABB /* MyResumeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyResumeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4136E45125B5D7E900D56ABB /* MyResumeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyResumeTests.swift; sourceTree = "<group>"; };
 		4136E45325B5D7E900D56ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4136E45825B5D7E900D56ABB /* MyResumeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyResumeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4136E45C25B5D7E900D56ABB /* MyResumeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyResumeUITests.swift; sourceTree = "<group>"; };
@@ -127,6 +142,8 @@
 		419C444525C99795004ADD2D /* Error.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Error.json; sourceTree = "<group>"; };
 		419C444D25C99B16004ADD2D /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		419C445225C99B79004ADD2D /* FetchResumeErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchResumeErrorView.swift; sourceTree = "<group>"; };
+		419C445825CAE907004ADD2D /* DateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
+		419C448125CB0D27004ADD2D /* APIRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestTests.swift; sourceTree = "<group>"; };
 		41CE1F9F25B8CA7D00C1926A /* CardListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListCollectionViewCell.swift; sourceTree = "<group>"; };
 		41CE1FA825B8D27A00C1926A /* CardListCollectionViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListCollectionViewControllerDelegate.swift; sourceTree = "<group>"; };
 		41CE1FAD25B99BF800C1926A /* CardListCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListCollectionViewDataSource.swift; sourceTree = "<group>"; };
@@ -248,8 +265,9 @@
 		4136E45025B5D7E900D56ABB /* MyResumeTests */ = {
 			isa = PBXGroup;
 			children = (
-				4136E45125B5D7E900D56ABB /* MyResumeTests.swift */,
+				419C445725CAE8E3004ADD2D /* Extensions */,
 				4136E45325B5D7E900D56ABB /* Info.plist */,
+				419C448125CB0D27004ADD2D /* APIRequestTests.swift */,
 			);
 			path = MyResumeTests;
 			sourceTree = "<group>";
@@ -399,6 +417,14 @@
 				419C444525C99795004ADD2D /* Error.json */,
 			);
 			path = Lottie;
+			sourceTree = "<group>";
+		};
+		419C445725CAE8E3004ADD2D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				419C445825CAE907004ADD2D /* DateTests.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		41CE1FA425B8CA8100C1926A /* Cells */ = {
@@ -776,7 +802,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4136E45225B5D7E900D56ABB /* MyResumeTests.swift in Sources */,
+				419C449525CB0D87004ADD2D /* Resume.swift in Sources */,
+				419C44AD25CB0D97004ADD2D /* Screenshot.swift in Sources */,
+				419C44A925CB0D95004ADD2D /* SocialNetwork.swift in Sources */,
+				419C446D25CAF8CF004ADD2D /* Date.swift in Sources */,
+				419C449D25CB0D8F004ADD2D /* Experience.swift in Sources */,
+				419C448D25CB0D6D004ADD2D /* API+Routes.swift in Sources */,
+				419C447125CB09E1004ADD2D /* API.swift in Sources */,
+				419C449125CB0D80004ADD2D /* FileHelper.swift in Sources */,
+				419C445925CAE907004ADD2D /* DateTests.swift in Sources */,
+				419C447525CB09E7004ADD2D /* API+Request.swift in Sources */,
+				419C449925CB0D8A004ADD2D /* PersonalInformations.swift in Sources */,
+				419C447D25CB09F1004ADD2D /* API+Errors.swift in Sources */,
+				419C448225CB0D27004ADD2D /* APIRequestTests.swift in Sources */,
+				419C44A125CB0D91004ADD2D /* Contact.swift in Sources */,
+				419C447925CB09EB004ADD2D /* API+Resume.swift in Sources */,
+				419C448925CB0D60004ADD2D /* APIResponse.swift in Sources */,
+				419C44A525CB0D93004ADD2D /* Company.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -937,9 +979,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"MyResume/Preview Content\"";
-				DEVELOPMENT_TEAM = KB6H8JGYUZ;
+				DEVELOPMENT_TEAM = 8W35AB3VA5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MyResume/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -950,6 +994,7 @@
 				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arthurkleiber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.arthurkleiber";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -961,9 +1006,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"MyResume/Preview Content\"";
-				DEVELOPMENT_TEAM = KB6H8JGYUZ;
+				DEVELOPMENT_TEAM = 8W35AB3VA5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MyResume/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -974,6 +1021,7 @@
 				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arthurkleiber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.arthurkleiber";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
