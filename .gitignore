@@ -2,13 +2,13 @@
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
-## Fastlane
-fastlane
-Gemfile
-Gemfile.lock
-
 Pods
 .DS_Store
+
+# Fastlane
+fastlane/Appfile
+fastlane/Matchfile
+fastlane/README.md
 
 ## User settings
 xcuserdata/
