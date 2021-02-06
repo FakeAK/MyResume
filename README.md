@@ -1,6 +1,8 @@
 Hello there!
 
-This app is my resume as an iOS application and it will soon be available on the appstore.  
+This app is my resume as an iOS application and it will soon be available on the appstore.
+EDIT: The app has been rejeced "because it seems to be intended for a small, or niche, set of users" and "your app is intended to be like sort of CV and something like that isn’t suitable for the store".
+
 It fetches informations from a remote JSON file so if you want the same application for your resume you can just clone the repository, change the urls to fetch (in API.swift) for the JSON and optionally your CV as PDF.  It is very important that your JSON respects the structure below, juste take it and just replace the informations according to your profile.
 
 # Screenshots
