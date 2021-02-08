@@ -1,3 +1,5 @@
+![build passing](https://github.com/FakeAK/MyResume/workflows/build/badge.svg)
+
 Hello there!
 
 This app is my resume as an iOS application and it will soon be available on the appstore.  
